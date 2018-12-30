@@ -1,0 +1,183 @@
+<html lang="en" style="font-size: 37.5px;"><head _wxhkphogpkobbkjccgfifhfjlahnoocnan_="shake_1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="css_game/common.css">
+    <link rel="stylesheet" href="css_game/index.css">
+    <!-- 移动端适配 -->
+    <script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+<style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}</style></head>
+
+<body>
+<div id="wrap">
+    <div class="header clearfix">
+        
+        <a href="javascript:history.go(-1)" class="back"> <p class="rule fl">返回</p></a>
+        
+        <p class="rule fl">活动规则</p>
+        <a href="personal-center.html" id="myWin">
+            <p class="my fr">我的奖品</p>
+        </a>
+        <div class="title"></div>
+    </div>
+    <!--轮盘-->
+    <div class="rotate">
+        <div class="lunpai">
+            <ul class="prize running">
+                <li>
+                 <div>
+                    <span></span>
+                    <p>500M流量</p>
+                  </div>
+                </li>
+                <li>
+                 <div>
+                    <span></span>
+                    <p>50元话费</p>
+                  </div>
+                </li>
+                <li>
+                   <div>
+                    <span></span>
+                    <p>20元话费</p>
+                    </div>
+                </li>
+                <li>
+                  <div>
+                    <span></span>
+                    <p>300M流量</p>
+                  </div>  
+                </li>
+                <li>
+                  <div>
+                    <span></span>
+                    <p>1G流量</p>
+                  </div>
+                </li>
+                <li>
+                   <div>
+                    <span></span>
+                    <p>谢谢参与</p>
+                   </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ring light"></div>
+        <div id="btn"></div>
+    </div>
+    <div class="border">
+        您今日还有 <span id="change"> 10</span> 次抽奖机会
+    </div>
+    <!--滚动信息-->
+    <div class="scroll">
+        <p></p>
+        <div class="sideBox">
+           <div class="bd" id="txtMarqueeTop">
+            <div class="tempWrap" style="overflow:hidden; position:relative; height:120px"><ul style="height: 260px; position: relative; padding: 0px; margin: 0px; top: -36px;"><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">137</span>****<span class="end-num">1059</span>
+                    获得<span class="info">300M流量</span>
+                </li>
+                <li style="height: 20px;">
+                    恭喜<span class="start-num">180</span>****<span class="end-num">0182</span>
+                    获得<span class="info">50元话费</span>
+                </li>
+                <li style="height: 20px;">
+                    恭喜<span class="start-num">183</span>****<span class="end-num">1143</span>
+                    获得<span class="info">500M流量</span>
+                </li>
+                <li style="height: 20px;">
+                    恭喜<span class="start-num">173</span>****<span class="end-num">2150</span>
+                    获得<span class="info">20元话费</span>
+                </li>
+                 <li style="height: 20px;">
+                    恭喜<span class="start-num">134</span>****<span class="end-num">1950</span>
+                    获得<span class="info">300M流量</span>
+                </li>
+                <li style="height: 20px;">
+                    恭喜<span class="start-num">177</span>****<span class="end-num">2107</span>
+                    获得<span class="info">20元话费</span>
+                </li>
+                 <li style="height: 20px;">
+                    恭喜<span class="start-num">137</span>****<span class="end-num">1059</span>
+                    获得<span class="info">300M流量</span>
+                </li>
+            <li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">180</span>****<span class="end-num">0182</span>
+                    获得<span class="info">50元话费</span>
+                </li><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">183</span>****<span class="end-num">1143</span>
+                    获得<span class="info">500M流量</span>
+                </li><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">173</span>****<span class="end-num">2150</span>
+                    获得<span class="info">20元话费</span>
+                </li><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">134</span>****<span class="end-num">1950</span>
+                    获得<span class="info">300M流量</span>
+                </li><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">177</span>****<span class="end-num">2107</span>
+                    获得<span class="info">20元话费</span>
+                </li><li class="clone" style="height: 20px;">
+                    恭喜<span class="start-num">137</span>****<span class="end-num">1059</span>
+                    获得<span class="info">300M流量</span>
+                </li></ul></div>
+            </div>
+        </div>
+    </div>
+    <!--游戏规则弹窗-->
+    <div id="mask-rule">
+        <div class="box-rule">
+            <h2>活动规则说明</h2>
+            <span id="close-rule"></span>
+            <div class="con">
+                <div class="text">
+                    <p>1.活动时间：2018年10月18日——2018年12月31日。<br>
+2.本次活动为福建某某公司专属特权活动，仅针对目标用户参与。<br>
+3.活动期间，福建某某公司专属客户每天可参与抽奖一次。<br>
+4.本次活动奖品为20元话费、50元话费、300M省内加餐包、500M省内加餐包、1G省内加餐包。<br>
+5.每个用户当月获得话费和流量奖品将于次月到账。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中奖提示-->
+    <div id="mask">
+        <div class="blin"></div>
+        <div class="caidai"></div>
+        <div class="winning">
+            <p><b>恭喜您</b><br>抽中了<span id="text1"></span></p>
+            <a href="#" target="_self" class="btn">确定</a>
+         
+        </div>
+    </div>
+    <!--中奖提示-->
+    <div id="mask2">
+        <div class="blin"></div>
+        <div class="caidai"></div>
+        <div class="winning">
+            <p><br><b>谢谢参与</b></p>
+            <a href="#" target="_self" class="btn">确定</a>
+         
+        </div>
+    </div>
+    
+    
+</div>
+
+<script src="js_game/jquery-1.11.3.min.js"></script>
+<script src="js_game/jquery.rotate.js"></script>
+<script src="js_game/h5_game_common.js"></script>
+<script src="js_game/index.js"></script>
+<script src="js_game/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">jQuery("#txtMarqueeTop").slide({ mainCell:"ul",autoPlay:true,effect:"topMarquee",interTime:50,vis:6  });</script>
+
+</body></html>

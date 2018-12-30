@@ -1,0 +1,407 @@
+<html ><head _wxhkphogpkobbkjccgfifhfjlahnoocnan_="shake_1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>我的朋友圈</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+<link type="text/css" rel="stylesheet" href="css/app.css">
+
+<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+<script type="text/javascript" src="js/swiper.min.js"></script>
+
+<style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}</style>
+
+<!-- 倒计时样式 -->
+<style type="text/css">
+.statusbar {
+    position: relative;
+    height: 54px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#FEF391),to(#FBE253));
+    overflow: hidden;
+    color: #fff;
+}
+
+.statusbar .subleft.avil, .statusbar .subleft.soldout {
+    background: #E61414;
+}
+.statusbar .subleft {
+    position: relative;
+    margin-right: 100px;
+    height: 54px;
+}
+.statusbar .countdown {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 90px;
+    height: 54px;
+    text-align: center;
+}
+.statusbar .countdown .txt {
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    color: #9e495b;
+}
+.statusbar .countdown .clockrun {
+    margin: 2px 0 0 5px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+.statusbar .countdown .clockrun .num {
+    float: left;
+    min-width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    background: #690b08;
+    border-radius: 3px;
+}
+.statusbar .countdown .clockrun .dot {
+    float: left;
+    width: 4px;
+    height: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: grey;
+} 
+.statusbar .subleft .price {
+    padding: 0 10px;
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    vertical-align: text-bottom;
+    font-size: 24px;
+}
+.statusbar .subleft .price strong {
+    font-size: 42px;
+    font-weight: 400;
+}
+.statusbar .subleft .information {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    color: #fff;
+    width: 150px;
+}
+.statusbar .subleft .information .soldcount {
+    display: inline-block;
+    padding: 0 6px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+.statusbar .subleft .information .oprice {
+    padding: 0 4px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+}
+</style>
+
+
+</head>
+<body>
+<!-- <link rel="stylesheet" href="../themes/css/home.css" type="text/css">
+<link rel="stylesheet" href="../themes/css/core.css" type="text/css">
+<link rel="stylesheet" href="../themes/css/icon.css" type="text/css">
+<header class="aui-header-default aui-header-fixed aui-header-bg">
+    <a href="javascript:history.back(-1)" class="aui-header-item">
+      <i class="aui-icon aui-icon-back-white"></i>
+    </a>
+    <div class="aui-header-center aui-header-center-clear">
+      <div class="aui-header-center-logo">
+        <div class="aui-car-white-Typeface">购物车(6)</div>
+      </div>
+    </div>
+    <a href="#" class="aui-header-item-icon" style="min-width:0">
+      <i class="aui-icon aui-icon-member"></i>
+    </a>
+  </header> -->
+
+<a href="javascript:history.back(-1)" class="aui-header-item">
+      <i class="aui-icon aui-icon-back-white">返回</i>
+    </a>
+<div id="main">
+  <div id="list">
+    <ul>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt data-avt" src="images/0.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"><span class="data-name">万虎科技~贾素杰</span></p>
+            <div class="post">
+              <p>大家好，听说国内冻成狗🐶？我这边还挺热～</p>
+              <p> <img class="list-img" src="images/jt1.jpg" style="height: 80px;"> <img class="list-img" src="images/yt3.jpg" style="height: 80px;"> <img class="list-img data-avt" src="images/0.jpg" style="height: 80px;"> <img class="list-img data-avt" src="images/guide2.png" style="height: 80px;"> </p>
+           <div class="r"></div>
+              <div class="cmt-wrap" id="J_statusbar" data-spm="statusbar"><div class="statusbar">
+                    <div class="subleft avil">
+                            <div class="price ">¥<strong class="small">预定</strong>
+                            </div>
+                            <div class="information">
+                                <div class="soldcount"><span>12558</span>件已售</div>
+                                <div class="oprice">专柜价<del>¥ 120.00</del></div>
+                            </div>
+                    </div>
+                    <div class="countdown">
+                        <div id="J_CountDownTxt" class="txt">距结束仅剩</div>
+                        <div class="clockrun">
+                            <span class="num" id="J_TimeHour">34</span><span class="dot">:</span>
+                            <span class="num" id="J_TimeMin">03</span><span class="dot">:</span>
+                            <span class="num" id="J_TimeSec">58</span><span class="dot">.</span>
+                            <span class="num" id="J_TimeWSec">04</span>
+                        </div>
+                    </div>
+                </div>
+          </div>
+             
+            </div>
+            <p class="time">刚刚</p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          
+          </div>
+          <div class="r"></div>
+          <div class="cmt-wrap">
+            <div class="like"><img src="images/l.png">空空空，陈冠希，杨幂，王思聪，陈赫，刘德华，马云...</div>
+            <div class="cmt-list">
+              <p><span>wu世勋-EXO：</span>나는 서명～</p>
+              <p><span>鹿晗：</span>我们在国内冻成狗，我也想跟哥您去热热～</p>
+              <p><span>权志龙：</span>나는 서명～</p>
+              <p><span>王思聪：</span>去哪玩啊？那么爽</p>
+              <p> <span class="data-name">万虎科技~贾素杰</span> 回复 <span> 王思聪 </span> <span> ： </span> 澳洲大堡礁，这边刚好是夏季，挺适合避寒的。 </p>
+              <p><span>杨幂：</span>😘私人飞机出行，求带上我～</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/n5.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 王思聪 </p>
+            <div class="post">
+              <p> 那一年这兄弟三人发誓一定要出人头地 <br>
+                以后有福同享有难同当 <br>
+                如今： <br>
+                大哥只手遮天万人之上 <br>
+                二哥黄金万两富甲一方 <br>
+                三弟淡泊名利为人低调 </p>
+              <img class="list-img" src="images/xa1.jpg" style="height: 80px;"> <img class="list-img" src="images/ma1.jpg" style="height: 80px;"> <img class="data-avt list-img" src="images/0.jpg" style="height: 80px;"> </div>
+            <p class="time"> 1分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"> </div>
+          <div class="cmt-wrap">
+            <div class="like"> <img src="images/l.png"> 鹿晗，林更新，杨幂，angelababy，范冰冰... </div>
+            <div class="cmt-list">
+              <p> <span> 鹿晗： </span> 赞！ </p>
+              <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 低调低调。。 </p>
+              <p> <span> 王思聪 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 哥您就是太低调了 </p>
+              <p> <span> 习 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 好几天没见，我们该聚聚了 </p>
+              <p> <span> 马云 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 有笔大生意找你聊聊 </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a1.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 空空空 </p>
+            <p class="post"> 还是好困~ <img src="images/c1.jpg"> </p>
+            <p class="time"> 2分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+            <div class="r"> </div>
+            <div class="cmt-wrap">
+              <div class="like"> <img src="images/l.png"> 陈赫，叫兽易小星，王思聪，陈冠希，余文乐... </div>
+              <div class="cmt-list">
+                <p> <span> 陈赫： </span> 怪我咯~ </p>
+                <p> <span> 陈冠希： </span> 怪我咯~ </p>
+                <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 怪我咯~ </p>
+                <p> <span> 空空空 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 知道就好！ </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a2.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 周杰伦 </p>
+            <div class="post">
+              <p> <b class="data-name">万虎科技~贾素杰</b> ，决战夜你要加油！我们哎哟不错战队是最屌的！ </p>
+              <img class="list-img" src="images/c2.jpg" style="height: 80px;"> <img class="data-avt list-img" src="images/0.jpg" style="height: 80px;"> </div>
+            <p class="time"> 2分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"> </div>
+          <div class="cmt-wrap">
+            <div class="like"> <img src="images/l.png"> 汪峰，那英，庾澄庆 </div>
+            <div class="cmt-list">
+              <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 杰伦老师，决战夜小公举会来吗。~ </p>
+              <p> <span> 周杰伦 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 你拿冠军了，我让你当小公举的小王纸。 </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a5.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="ads">推广<img src="images/ads.png"></p>
+            <p class="po-name">金猫银猫CSmall官方</p>
+            <div class="post">金猫银猫CSmall情人节买珠宝赠永生花专场
+              <p><a class="ad-link" href="http://m.csmall.com/activity/3914.html">查看详情 <img src="images/link.png"></a></p>
+              <a href="http://m.csmall.com/activity/3914.html"><img class="noplayimg" src="images/asd888.jpg"></a></div>
+            <p class="time">45分钟前</p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"></div>
+          <div class="cmt-wrap">
+            <div class="like"><img src="images/l.png">范冰冰，李晨，王思聪，王健林，...</div>
+            <div class="cmt-list">
+              <p><span>范冰冰：</span>珠宝再加上永生花，花永生，爱永恒，想想都觉得好浪漫哦~<img class="bq" src="images/bq1.png"></p>
+              <p><span>李晨</span>回复<span>范冰冰 ：</span>小肥羊~初七情人节见！定格我们的爱情吧❤</p>
+              <p><span>王思聪：</span>我女朋友多，团购才能搞定啊！</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a3.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 邓超 </p>
+            <div class="post">
+              <p> we are伐木累！欢迎加入跑男第三季！ </p>
+              <p> <img class="list-img" src="images/c3.jpg" style="height: 80px;"> <img class="list-img" src="images/c4.jpg" style="height: 80px;"> <img class="data-avt list-img" src="images/0.jpg" style="height: 80px;"> </p>
+            </div>
+            <p class="time"> 50分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"> </div>
+          <div class="cmt-wrap">
+            <div class="like"> <img src="images/l.png"> <b class="data-name">万虎科技~贾素杰</b> </div>
+            <div class="cmt-list">
+              <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 超哥，当初为什么要选我。 </p>
+              <p> <span> 邓超 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 你是我认识的人当中，最快的！ </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a4.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 范冰冰 </p>
+            <p class="post"> 我的生日趴，你为什么不来 <img class="data-avt" src="images/0.jpg"> </p>
+            <p class="time"> 52分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"> </div>
+          <div class="cmt-wrap">
+            <div class="like"> <img src="images/l.png"> <b class="data-name">万虎科技~贾素杰</b> ，李晨，李治廷，黎明... </div>
+            <div class="cmt-list">
+              <p> <span> 李晨： </span> 呵呵。 </p>
+              <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 最近忙，就酱。 </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="po-avt-wrap"> <img class="po-avt" src="images/a7.jpg"> </div>
+        <div class="po-cmt">
+          <div class="po-hd">
+            <p class="po-name"> 金星 </p>
+            <p class="post"> 完美！ <img src="images/c8.jpg"> </p>
+            <p class="time"> 55分钟前 </p>
+            <div class="tc1"> <img class="c-icon" src="images/c.png">
+              <div class="tc2"><span class="zan"><span>赞</span></span>　<span class="pinglun"><span>评论</span></span></div>
+            </div>
+          </div>
+          <div class="r"> </div>
+          <div class="cmt-wrap">
+            <div class="cmt-list">
+              <p> <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 星姐，求虐！ </p>
+              <p> <span> 金星 </span> 回复 <span class="data-name">万虎科技~贾素杰</span> <span> ： </span> 你呢，人长的挺好看，就是偏偏要靠才华。 </p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="big_img">
+    <div class="swiper-container2 swiper-container-horizontal">
+      <div class="swiper-wrapper">
+       
+      </div>
+    </div>
+    <div class="swiper-pagination2 swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+</div>
+
+<script>
+$(document).ready(function(){
+  /*调起大图 S*/
+   var mySwiper = new Swiper('.swiper-container2', {
+        loop: false,
+        pagination: '.swiper-pagination2',
+        })
+    $("#list").on("click", ".post img", 
+    function() {
+        var imgBox = $(this).parents(".post").find("img");
+        var i = $(imgBox).index(this);
+        $(".big_img .swiper-wrapper").html("")
+
+        for(var j = 0 ,c = imgBox.length; j < c ;j++){
+         $(".big_img .swiper-wrapper").append('<div class="swiper-slide"><div class="cell"><img src="' + imgBox.eq(j).attr("src") + '" / ></div></div>');
+        }
+        mySwiper.updateSlidesSize();
+        mySwiper.updatePagination();
+        $(".big_img").css({
+            "z-index": 1001,
+            "opacity": "1"
+        });
+        mySwiper.slideTo(i, 0, false);
+        return false;
+    });
+  
+    $(".big_img").on("click", 
+    function() {
+        $(this).css({
+            "z-index": "-1",
+            "opacity": "0"
+        });
+
+    });
+  });
+  /*调起大图 E*/
+</script>
+
+
+<div></div></body></html>

@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head _wxhkphogpkobbkjccgfifhfjlahnoocnan_="shake_1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>图标菜单</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="css/dh_style.css">
+
+<!-- <style>
+@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}
+
+</style>
+ -->
+
+</head>
+
+<body>
+
+<div style="height:1000px;"></div>
+
+<div class="dh_wrap">
+	<div class="menu"><img class="dh_icon_menu" src="img/dh/menu.png"><span class="dh_open"></span></div>
+	<div class="dh_btn dh_btn1 dh_open" data-num="1"><span>照相</span></div>
+	<div class="dh_btn dh_btn2 dh_open" data-num="2"><span>位置</span></div>
+	<div class="dh_btn dh_btn3 dh_open" data-num="3"><span>音乐</span></div>
+	<div class="dh_btn dh_btn4 dh_open" data-num="4"><span>聊天</span></div>
+</div>
+
+<!-- <script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script> -->
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".menu").click(function(){
+		var span = $(this).find("span");
+		if(span.hasClass("dh_open")){
+			span.removeClass("dh_open").addClass("dh_close");
+			$(".dh_btn").removeClass("dh_open").addClass("dh_close");
+		}else{
+			span.removeClass("dh_close").addClass("dh_open");
+			$(".dh_btn").removeClass("dh_close").addClass("dh_open");
+		}
+	});
+});
+</script>
+	
+
+
+</body></html>
