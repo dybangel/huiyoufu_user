@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	 <link rel="stylesheet" href="themes/css/swiper.min.css">
+	<title></title>
+</head>
+<body>
+
+<style type="text/css">
+.swiper-container {
+    width: 100%;
+    height: 300px;
+} 
+</style>
+
+<!-- 轮播图容器 -->
+<div id="banner_container" class="swiper-container"></div>
+
+<!-- js引用 -->
+<script type="text/javascript" src="themes/js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/doT.min.js"></script>	
+ <script type="text/javascript" src="themes/js/swiper.min.js"></script>
+
+<!-- 轮播图模板 -->
+<script  id="banner_template" type="text/x-dot-template">
+	 <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="{{=it[0].fvalue}}" /></div> <!-- 添加图片 -->
+            <div class="swiper-slide"><img src="{{=it[1].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[2].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[3].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[4].fvalue}}" /></div> 
+      </div>
+         <div class="swiper-pagination"></div>
+         <!-- 小圆点分页器 -->
+         <!--    <div class="swiper-button-prev"></div>上一页 -->
+          <!--  <div class="swiper-button-next"></div>下一页 -->
+</script>
+
+ <script>    
+	var Gserver="http://192.168.123.2";
+	var Gapiname="/huiyoufu_api/api.php";
+	var Gget="get";
+	var Gdatatype="json";
+ //异步获取数据函数 
+ function getjson(action,templateid,containerid,func){
+	var count=0;
+	 $.ajax({
+      		type:Gget,
+      		url:Gserver+Gapiname,//?do=getdata&start="+count,
+			async:true,
+      		data:{"action":action,"start":count},
+      		dataType:Gdatatype, // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
+      		success:function(data){		
+      			if(data!="null"){	
+      				var template = $('#'+templateid)[0];	
+      				var  dot = doT.template(template.innerHTML);//绑定模板
+      				$('#'+containerid)[0].innerHTML=dot(data);//用模板和数据填充容器
+      				eval(func);
+      				if(action=="getmystore"){
+				      							// 		           count=count+1;
+																	// mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
+																	// var template = $('#interpolationtmpl')[0];
+																	// //绑定模板
+																	// var  dot = doT.template(template.innerHTML);
+																	// if(ispull){
+																	// 	//将模板和数据加载到容器
+																	// 	$('#headlist')[0].innerHTML= dot(data);
+																	// ispull=false;
+																	// }else{
+																	// 	$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
+																	// }
+      				}else if(action=="getbanners"){
+					//	setbanner();
+      				 }// else if over				
+      			}//if(data!='null')over
+			},//success over
+			error: function(xhr, type, errorThrown) {
+				       console.log(xhr);				 	
+					}
+	   })//ajax over
+}//function over
+
+//设置轮播图函数
+ function setbanner(){
+			var mySwiper = new Swiper(".swiper-container",{
+		       		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    				observeParents:true,//修改swiper的父元素时，自动初始化swiper
+                    autoplay:3000,//--每秒中轮播一次
+                    loop:true,//--可以让图片循环轮播
+                    autoplayDisableOnInteraction:false,//--在点击之后可以继续实现轮播
+                    pagination:".swiper-pagination",//--让小圆点显示
+                    paginationClickable:true,//--实现小圆点点击
+                    prevButton:".swiper-button-prev",//--实现上一页的点击
+                    nextButton:".swiper-button-next",//--实现下一页的点击
+　　　　　　　　　//　　　effect:"flip"//--可以实现3D效果的轮播
+                })  
+  }
+
+ $(document).ready(function () {
+  getjson('getbanners','banner_template','banner_container','setbanner();'); 
+ })   
+ 
+
+  </script>
+</body>
+</html>

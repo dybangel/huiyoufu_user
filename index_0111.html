@@ -287,7 +287,7 @@ div.aui-banner-wrapper-item{
 	   <script type="text/javascript" src="themes/js/zepto.min.js"></script>
 	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
 	<script type="text/javascript" src="themes/js/aui.js"></script>
-	<!-- <script src="themes/js/idangerous.swiper.min.js"></script>-->
+	 <script src="themes/js/idangerous.swiper.min.js"></script>
 	 
  <script type="text/javascript">
 //$(function(){
@@ -505,10 +505,8 @@ mui.init({
 			function pulldownRefresh() {
 				setTimeout(function() {
 					//addData();
-					alert('down');
-					mui('#pullRefresh').pullRefresh().endPulldownToRefresh();
-				//	mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
-					//mui.toast("为你推荐了5篇文章");
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+					mui.toast("为你推荐了5篇文章");
 				}, 1500);
 			}
 	

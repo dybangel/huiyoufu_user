@@ -1,0 +1,42 @@
+{
+	"index.html": {
+		"refer": [
+			"my-membership.html",
+			"game/zhuanpan/index.html",
+			"chat/index.html",
+			"barcode_scan.html",
+			"my-sign.html",
+			"pengyouquan/index.html"
+		]
+	},
+	"my-membership.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"dingzhuo/index.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"game/zhuanpan/index.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"chat/index.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"my-sign.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"pengyouquan/index.html": {
+		"refer": [
+			"index.html"
+		]
+	}
+}
