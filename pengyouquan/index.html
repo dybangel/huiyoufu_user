@@ -111,26 +111,37 @@
 
 </head>
 <body>
-<!-- <link rel="stylesheet" href="../themes/css/home.css" type="text/css">
+	<style>
+		.myheader100{
+			height: 100% !important;
+		}
+		.myheader6{
+			height:6% !important;
+		}
+	</style>
+ <link rel="stylesheet" href="../themes/css/home.css" type="text/css">
 <link rel="stylesheet" href="../themes/css/core.css" type="text/css">
 <link rel="stylesheet" href="../themes/css/icon.css" type="text/css">
-<header class="aui-header-default aui-header-fixed aui-header-bg">
-    <a href="javascript:history.back(-1)" class="aui-header-item">
+<header class="aui-header-default aui-header-fixed aui-header-bg myheader6">
+	<div style="height: 100%;width: 19%;" onclick="closeme()">
+    <a href="#" class="aui-header-item myheader100" style="    margin-left: -30%;" >
       <i class="aui-icon aui-icon-back-white"></i>
     </a>
-    <div class="aui-header-center aui-header-center-clear">
-      <div class="aui-header-center-logo">
-        <div class="aui-car-white-Typeface">购物车(6)</div>
-      </div>
+    </div>
+    <div class="aui-header-center aui-header-center-clear aui-car-white-Typeface  myheader100" style="    margin-left: -3%;">
+    	青岛海底捞
+      <!--<div class="aui-header-center-logo myheader100">
+        <div class="aui-car-white-Typeface myheader100">购物车(6)</div>
+      </div>-->
     </div>
     <a href="#" class="aui-header-item-icon" style="min-width:0">
       <i class="aui-icon aui-icon-member"></i>
     </a>
-  </header> -->
+  </header> 
 
-<a href="javascript:history.back(-1)" class="aui-header-item">
+<!--<a href="javascript:history.back(-1)" class="aui-header-item">
       <i class="aui-icon aui-icon-back-white">返回</i>
-    </a>
+    </a>-->
 <div id="main">
   <div id="list">
     <ul>
@@ -364,7 +375,14 @@
     </div>
     <div class="swiper-pagination2 swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
 </div>
-
+ <script type="text/javascript" src="../js/doT.min.js"></script>	
+ <script type="text/javascript" src="../js/common.js"></script>
+ <script>
+ 	function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+ </script>
 <script>
 $(document).ready(function(){
   /*调起大图 S*/

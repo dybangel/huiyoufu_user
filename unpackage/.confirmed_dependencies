@@ -6,37 +6,63 @@
 			"chat/index.html",
 			"barcode_scan.html",
 			"my-sign.html",
-			"pengyouquan/index.html"
-		]
+			"pengyouquan/index.html",
+			"my-addres.html",
+			"dingzhuo/index.html",
+			"code_test2.html",
+			"jinrihaodian.html",
+			"my-coupon.html",
+			"my-order.html",
+			"datetime/index.html"
+		],
+		"resources": []
 	},
 	"my-membership.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
 	},
 	"dingzhuo/index.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
 	},
 	"game/zhuanpan/index.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
 	},
 	"chat/index.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
 	},
 	"my-sign.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
 	},
 	"pengyouquan/index.html": {
 		"refer": [
 			"index.html"
-		]
+		],
+		"resources": []
+	},
+	"my-edit-address.html": {
+		"refer": [
+			"my-addres.html"
+		],
+		"resources": []
+	},
+	"my-addres.html": {
+		"refer": [
+			"my-edit-address.html"
+		],
+		"resources": []
 	}
 }

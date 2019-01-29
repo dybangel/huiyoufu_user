@@ -58,37 +58,52 @@ div.aui-banner-wrapper-item{
 <div id="pullRefresh" class=" mui-scroll-wrapper">	
 	<div class="mui-scroll">
 	<div class="aui-content-box">
-		 <!--轮播图-->
+
+<!--轮播图-->
 	<div id="banner_container"></div>
 
 <!--顶部导航按钮-->
 		<section class="aui-grid-content">
 			<div class="aui-grid-row">
-				<a href="my-sign.html" class="aui-grid-row-item">
+				<!--href="my-sign.html"--> 
+				<a  class="aui-grid-row-item event_jinrihaodian">
 					<i class="aui-icon-large aui-icon-sign"></i>
-					<p class="aui-grid-row-label">每日签到</p>
+					<p class="aui-grid-row-label">今日好店</p>
 				</a>
-				<a href="my-time.html" class="aui-grid-row-item">
-					<i class="aui-icon-large aui-icon-time"></i>
-					<p class="aui-grid-row-label">限时抢购</p>
+			<!--href="my-time.html"-->
+			    <a  class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-time event_youhuiqianggou"></i>
+					<p class="aui-grid-row-label">优惠抢购</p>
 				</a>
-				<a href="my-membership.html" class="aui-grid-row-item">
+				<a href="my-membership.html" class="aui-grid-row-item event_wodekabao">
 					<i class="aui-icon-large aui-icon-vip"></i>
-					<p class="aui-grid-row-label">会员专享</p>
+					<p class="aui-grid-row-label">我的卡包</p>
 				</a>
 				<!-- <a href="my-purchase.html" class="aui-grid-row-item"> -->
-					<a href="state/index.html" class="aui-grid-row-item">
+					<a href="state/index.html" class="aui-grid-row-item event_wodeyuding">
 					<i class="aui-icon-large aui-icon-group"></i>
 					<p class="aui-grid-row-label">我的预定</p>
 				</a>
-				<a href="my-invitation.html" class="aui-grid-row-item">
+				<a href="my-invitation.html" class="aui-grid-row-item event_wodexinxi">
 					<i class="aui-icon-large aui-icon-share"></i>
-					<p class="aui-grid-row-label">分享领券</p>
+					<p class="aui-grid-row-label">我的信息</p>
 				</a>
 				<a href="share.html"  class="aui-grid-row-item">
 					<i class="aui-icon-large aui-icon-share"></i>
 					<p class="aui-grid-row-label">拍照</p>
 					
+				</a>
+				<a href="javascript:openwin('dingzhuo/index.html','3702','1234')"  class="aui-grid-row-item myopen">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">打开</p>	
+				</a>
+				<a class="aui-grid-row-item myupload">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">上传</p>	
+				</a>
+				<a onclick=openwin("datetime/index.html") class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">时间</p>	
 				</a>
 			</div>
 		</section>
@@ -317,23 +332,24 @@ div.aui-banner-wrapper-item{
 <div>{{=it[0].faddress || ''}}</div> -->
 <!--模板我的店铺-->
 <script id="store_template" type="text/x-dot-template">
+{{ for (var i=0;i<it.length;i++) { }}
 <!-- 横向 -->
 		<div class="aui-list-product-box">		
 			<!-- 上 -->
-			<div class="aui-card-box">
-				<div class="aui-card-box-user">
-					<img src="themes/img/user/user1.png" alt="">
+			<div class="aui-card-box ">
+				<div class="aui-card-box-user event_community">
+					<img src="http://192.168.123.2/huiyoufu_api{{=it[i].fstore_logo}}" alt="">
 				</div>
 				<div class="aui-card-box-name">
-					<h2 class="aui-card-box-name">{{=it[0].fname}}</h2>
-					<a href="dingzhuo/index.html"><span class="aui-card-box-btn">+订桌</span></a>
+					<h2 class="aui-card-box-name event_community">{{=it[i].fstore_name}}</h2>
+				{{if(it[i].fstore_access_order==1){ }} 	<a class="dingzhuo" target="{{=it[i].fstore_code}}" store_name="{{=it[i].fstore_name}}" store_address="{{=it[i].fstore_address}}"><span class="aui-card-box-btn" >+订桌  </span></a>{{}}}
 				</div>
 				<div class="aui-card-box-time">11月10日前</div>
 			</div>
 			<!-- 中 -->
-			<div class="aui-card-media">
+			<div class="aui-card-media event_community">
 				<div class="aui-card-media-item">
-					<img src="themes/img/pd/sf-3.jpg">
+					<img src="http://192.168.123.2/huiyoufu_api{{=it[i].fstore_logo}}">
 				</div>
 				<a href="pengyouquan/index.html">
 				<div class="aui-card-media-inner">
@@ -353,18 +369,19 @@ div.aui-banner-wrapper-item{
 			</div>
 			<!-- 下 -->
 			<div class="aui-list-title-btn">
-								<a href="game/zhuanpan/index.html">抽奖</a>
-								<a href="tel:18688888888">电话</a>
-								<a href="chat/index.html" class="red-color">留言</a>
+							{{if(it[i].nowact_state==1){ }} 	<a  class="event_choujiang" target="{{=it[i].fstore_code}}">抽奖</a>{{ } }}
+								<a href="tel:{{=it[i].fstore_tel}}">电话</a>
+								<a  class="red-color event_chat"  target="{{=it[i].fstore_code}}">留言</a>
 			</div>
 			<!-- 分割线 -->
 			<div class="aui-dri"></div>
+			{{ } }}
 		</div>
 </script>
 <!--banner模板-->
 <script  id="banner_template" type="text/x-dot-template">
-<div class="aui-banner-content aui-fixed-top" data-aui-slider="">
-	<div class="aui-banner-wrapper" >	
+<div class="aui-banner-content aui-fixed-top " data-aui-slider="">
+	<div class="aui-banner-wrapper " >	
 	 <div class="swiper-wrapper">
 		{{if(it&&it.length>0){ }}
 		{{for(var i=0;i<it.length;i++){ }}
@@ -415,34 +432,93 @@ You are {{=it.age}} and still dont have aname?
       <div class="pic"></div>
     </div>
   </div>
-  </script>
+  </script> 
+  <script type="text/javascript" src="themes/js/swiper.min.js"></script>
   <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
  <script type="text/javascript" src="js/doT.min.js"></script>	
  <script type="text/javascript" src="js/common.js"></script>
- <script type="text/javascript" src="themes/js/swiper.min.js"></script>
+
 <script>
 //plus.webview.currentWebview(.setStyle({scrollIndicator:'none'}));
 //$('#pullRefresh').Scroll({indicators:false});
-
+ Gserver="http://192.168.123.2";
+ Gmember_id="201912111022010001";
+var count=0;
+var Gstartnum=0;
+var Glimitnum=1;
+var ispull=true;
 
 // H5 plus事件处理
 function plusReady(){
-//setsessionid();
-setTimeout(getjson("getbanners"),1500);
+//验证sessionid
+setsessionid();
+//alert('test1');
+getjson("getbanner","null=null");//plusReady();
+		//alert('test2');
+mui("body").on("tap",".event_jinrihaodian",function(){
+var store_code='0';
+openwin('jinrihaodian.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_youhuiqianggou",function(){
+var store_code=this.target;
+openwin('game/zhuanpan/index.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_wodekabao",function(){
+var store_code=this.target;
+openwin('my-coupon.html',store_code,Gmember_id);//my-membership.html
+});
+mui("body").on("tap",".event_wodeyuding",function(){
+var store_code=this.target;
+openwin('my-order.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_wodexinxi",function(){
+var store_code=this.target;
+openwin('my-membership.html',store_code,Gmember_id);
+});
 
+mui("body").on("tap",".dingzhuo",function(){
+var store_code=this.target;
+var store_name=this.getAttribute('store_name');
+var store_address=this.getAttribute('store_address');
+openwin('dingzhuo/index.html',store_code,Gmember_id,store_name,store_address);
+});
+
+
+
+mui("body").on("tap",".event_choujiang",function(){
+var store_code=this.target;
+openwin('game/zhuanpan/index.html',store_code,Gmember_id);
+});
+
+mui("body").on("tap",".event_chat",function(){
+var store_code=this.target;
+openwin('chat/index.html',store_code,Gmember_id);
+});
+
+mui("body").on("tap",".event_community",function(){
+var store_code=this.target;
+openwin('pengyouquan/index.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".myupload",function(){
+//var store_code=this.target;
+openwin('code_test2.html','3702',Gmember_id);
+});
+	
 };
- $(document).ready(function () {	
-		plusReady();
+
+$(document).ready(function () {	
+		
  })   
  
-//mui.ready(function () {			
-//			if(window.plus){
-//				plusReady();
-//			}else{
-//				document.addEventListener('plusready', plusReady, false);
-//			};
-//})
+mui.ready(function () {			
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener('plusready', plusReady, false);
+			};
+})
 
+//初始化上拉下拉事件
 mui.init({
 				pullRefresh: {
 					container: '#pullRefresh',
@@ -451,64 +527,34 @@ mui.init({
 						callback: pulldownRefresh
 					},
 					up: {
-						 height:50,//可选.默认50.触发上拉加载拖动距离
+						// height:5,//可选.默认50.触发上拉加载拖动距离
       					auto:false,//可选,默认false.自动上拉加载一次
-						contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
-     					contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+						//contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+     					//contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
 						callback: pullupRefresh
 					}
 				}
-			});
+	});
 			
 		//var dot;
-		var Gserver="http://192.168.123.2";
-		var count=0;
-		var ispull=true;
-			function pullupRefresh() {
-				setTimeout(
-					getjson('getmystore'),
-//					function() {
-//						  $.ajax({
-//    						type:"get",
-//    						url:"http://192.168.123.2/huiyoufu_api/api.php?do=getdata&start="+count,
-//							async:true,
-//    						data:{"action":"position","type":"select","id":"123"},
-//    						dataType:"json", // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
-//    						success:function(data){
-//    							if(data!="null"){
-//								count=count+1;
-//								mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
-//								var template = $('#interpolationtmpl')[0];
-//								var  dot = doT.template(template.innerHTML);
-//								if(ispull){
-//									$('#headlist')[0].innerHTML= dot(data);
-//								ispull=false;
-//								}else{
-//									$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
-//								}
-//    					}	
-//									//if over
-//								},
-//								 error: function(xhr, type, errorThrown) {
-//								 	console.log(xhr);
-//								 	
-//								 }
-//							})
-//						  },
-						  500);
+		
+		function pullupRefresh() {
+			//	setTimeout(
+					getjson('getfavstore','member_id='+Gmember_id+'&start='+Gstartnum+'&limit='+Glimitnum);//,500);
 
-				
 			}
 		/**
 			 * 下拉刷新具体业务实现
 			 */
-			function pulldownRefresh() {
+		function pulldownRefresh() {
 				setTimeout(function() {
 					//addData();
-					alert('down');
+					//alert('down');
+					 history.go(0);
+					//location.reload();
 					mui('#pullRefresh').pullRefresh().endPulldownToRefresh();
 				//	mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
-					//mui.toast("为你推荐了5篇文章");
+					mui.toast("刷新完成");
 				}, 1500);
 			}
 	
@@ -529,8 +575,10 @@ function scaned(t, r, f){
 	if(ms < 10){ ms='00'+ms; }
 	else if(ms < 100){ ms='0'+ms; }
 	var ts = '['+h+':'+m+':'+s+'.'+ms+']';
-
-	mui.toast("t="+t+" and r="+r+" and f="+f);
+//alert(r);
+var arr=r.split("=");
+alert('门店编号：'+arr[1]+"绑定");
+//mui.toast("t="+t+" and r="+r+" and f="+f);
 }
 
 
@@ -600,23 +648,7 @@ function cleanHistroy(){
 		});
 	});
 }
-          // headlist()结束
-            //	alert('first dotret');
-			//  var dataInter ={"name":"Jake","age":31};
-			//var dataInter={"fname":"hahah","faddress":"12312312"};
-			//alert(dataInter);
-			 //var mb =doT.template($("#interpolationtmpl").text());
-			 //$("#rongqi").html(mb(dataInter));
-				// var dataEval ={"name":"Jake","age":31,"interests":["basketball","hockey","photography"],"contact":{"email":"jake@xyz.com","phone":"999999999"}};
-				// var evalText = doT.template($("#evaluationtmpl").text());
-				// $("#evaluation").html(evalText(dataEval));
-			// var dataArr ={"array":["banana","apple","orange"]};
-			// var arrText =doT.template($("#arraystmpl").text());
-			// $("#arrays").html(arrText(data));
-		//	var dataEncode ={"name":"Jake","age":31};
-		//	var EncodeText =doT.template($("#conditionstmpl").text());
-		//	$("#condition").html(EncodeText(dataEncode));
-  //            headlist.innerHTML = dot(data);
+        
  
  // 拍照
 function captureImage(){
@@ -633,47 +665,52 @@ function captureImage(){
 		{resolution:res,format:fmt}
 	);
 }
-function getjson(action){
-	
-	//var count=0;
+function getbanner(data){
+	setbanner();
+      //				alert('this is getbanners data='+data);
+				var template = $('#banner_template')[0];
+   				 var  dot = doT.template(template.innerHTML);
+   				 $('#banner_container')[0].innerHTML=dot(data);
+}
+
+function getfavstore(data){
+	//mui.toast("this is getmystore");
+		//limit偏移
+				      	Gstartnum=Gstartnum+Glimitnum;
+					mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
+					var template = $('#store_template')[0];
+						//绑定模板
+					var  dot = doT.template(template.innerHTML);
+					if(ispull){
+						//将模板和数据加载到容器
+						$('#headlist')[0].innerHTML= dot(data);
+						ispull=false;
+					}else{
+						$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
+						}
+					//mui.toast("更新到"+Gstartnum+"条");
+}
+function getjson(action,par){
 	 $.ajax({
       		type:"get",
-      		url:Gserver+"/huiyoufu_api/api.php",//?do=getdata&start="+count,
+      		url:Gserver+"/huiyoufu_api/api.php?"+par,//?do=getdata&start="+count,
 			async:true,
-      		data:{"action":action,"start":count},
+      		data:{"action":action},
       		dataType:"json", // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
-      		success:function(data){		
-      			if(data!="null"){
-      				if(action=="getmystore"){
-				      									           count=count+1;
-																	mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
-																	var template = $('#store_template')[0];
-																	//绑定模板
-																	var  dot = doT.template(template.innerHTML);
-																	if(ispull){
-																		//将模板和数据加载到容器
-																		$('#headlist')[0].innerHTML= dot(data);
-																	ispull=false;
-																	}else{
-																		$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
-																	}
-      				}else if(action=="getbanners"){
-      					//alert(data);//mui.toast('setbanners');
-      					var template = $('#banner_template')[0];
-      					var  dot = doT.template(template.innerHTML);
-      				//	alert(data);
-      					$('#banner_container')[0].innerHTML=dot(data);
-      					setbanner();
-      				//	alert('a');
-      				}
-													
+      		success:function(data){
+      			if(data!="null"){	
+      				try{
+      					eval(action+'(data)'); 
+      		  			//eval(action+"('"+data+"')");
+      					}catch(e){
+      					//TODO handle the exception
+      					}								
       							}
-								},
-								 error: function(xhr, type, errorThrown) {
-								 	console.log(xhr);
-								 	
-								 }
-							})
+								 },
+			error: function(xhr, type, errorThrown) {
+					console.log(errorThrown);
+							 						}
+			})
 }
 
 
@@ -683,17 +720,72 @@ function getjson(action){
  function setbanner(){
 			var mySwiper = new Swiper(".swiper-container",{
 		       		observer:true,//修改swiper自己或子元素时，自动初始化swiper
-    				observeParents:true,//修改swiper的父元素时，自动初始化swiper
+    				observeParents:false,//修改swiper的父元素时，自动初始化swiper
                     autoplay:1000,//--每秒中轮播一次
                     loop:false,//--可以让图片循环轮播
-                //    autoplayDisableOnInteraction:false,//--在点击之后可以继续实现轮播
+                    autoplayDisableOnInteraction:false,//--在点击之后可以继续实现轮播
                     pagination:".swiper-pagination",//--让小圆点显示
-                //    paginationClickable:true,//--实现小圆点点击
-              //      prevButton:".swiper-button-prev",//--实现上一页的点击
-                //    nextButton:".swiper-button-next",//--实现下一页的点击
-　　　　　　　　　　//　　effect:"flip"//--可以实现3D效果的轮播
+                    paginationClickable:true,//--实现小圆点点击
+                    prevButton:".swiper-button-prev",//--实现上一页的点击
+                    nextButton:".swiper-button-next",//--实现下一页的点击
+　　　　　　　　　　　　effect:"flip",//--可以实现3D效果的轮播
+					onSlideChangeStart:function(sw){
+						var num =parseInt(sw.activeIndex);
+						console.log('---'+num);
+					},
+					onSlideChangeEnd:function(swiper){
+						alert('end');
+						swiper:update();
+						mySwiper:startAutoplay();
+						mySwiper:reLoop();
+						
+					}
                 })  
   }
+
+//打开新窗体
+function openwin(){
+	 var winpath = arguments[0]?arguments[0]:""; 
+	 var store_code = arguments[1]?arguments[1]:""; 
+	 var member_id = arguments[2]?arguments[2]:""; 
+	 var store_name=arguments[3]?arguments[3]:""; 
+	 var store_address=arguments[4]?arguments[4]:""; 
+	mui.openWindow({
+    url:winpath,
+    id:winpath,
+    styles:{
+      top:'0px',//新页面顶部位置
+      bottom:'0px',//新页面底部位置
+      //width:newpage-width,//新页面宽度，默认为100%
+      //height:newpage-height,//新页面高度，默认为100%
+     // ......
+    },
+    extras:{
+    	store_code:store_code,
+    	member_id:member_id,
+    	store_name:store_name,
+    	store_address:store_address
+     // .....//自定义扩展参数，可以用来处理页面间传值
+    },
+    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+    show:{
+      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+      aniShow:"slide-in-right",//页面显示动画，默认为”slide-in-right“；
+      duration:50 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+    },
+    waiting:{
+      autoShow:true,//自动显示等待框，默认为true
+      title:'正在加载...',//等待对话框上显示的提示内容
+      options:{
+        width:'10px',//等待框背景区域宽度，默认根据内容自动计算合适宽度
+        height:'10px',//等待框背景区域高度，默认根据内容自动计算合适高度
+      //  ......
+      }
+    }
+})
+	
+	
+}
 //异步获取数据
 //function load_val(callback){//定义一个回调函数
 //  $.getJSON("http://192.168.123.2/huiyoufu_api/api.php?do=getdate&start=1" , function(data){

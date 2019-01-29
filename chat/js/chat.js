@@ -67,6 +67,7 @@ $(function(){
                     //收到消息
                     socket.onmessage = function() {
                         var msg = JSON.parse(event.data); //解析收到的json消息数据
+                       // alert('msg.type='+msg.type+" "+"msg.user="+msg.user+" msg.content="+msg.content);
                         if(msg.type == 'login' || msg.type == 'logout'){
 //                          var html = '';
 //                          for(var id=0;id < msg.user_list.length ;id++)
@@ -88,8 +89,11 @@ $(function(){
 //                              '<p class="chat-block-nickname">'+ nickname +'</p>' +
 //                              '<span>'+ msg.content +'</span>' +
 //                              '</div>'
-//                          );
-							alert('have msg');
+           var html="<div class='send'><div class='msg'><img src="+"images/touxiang.png"+" />"+
+	"<p><i class='msg_input'></i>"+msg.content+"</p></div></div>";
+	upView(html);
+                         //   );
+						//	alert('have msg');
                         }
                     };
 
@@ -114,9 +118,9 @@ $(function(){
                         };
                         try{
                             socket.send(JSON.stringify(msg));
-                            var html="<div class='send'><div class='msg'><img src="+"images/touxiang.png"+" />"+
-	"<p><i class='msg_input'></i>"+msg+"</p></div></div>";
-	upView(html);
+//                          var html="<div class='send'><div class='msg'><img src="+"images/touxiang.png"+" />"+
+//	"<p><i class='msg_input'></i>"+msg.content+"</p></div></div>";
+//	upView(html);
                         } catch(ex) {
                             console.log(ex);
                         }

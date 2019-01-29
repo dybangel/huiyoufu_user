@@ -5,13 +5,14 @@
 		<title>聊天界面</title>
 		<link rel="stylesheet" type="text/css" href="chat.css">
 
-		<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script src="js/jquery.min.js"></script>
+		<!--<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script>-->
+		<script src="js/jquery.min.js"></script>
 		<script src="js/flexible.js"></script>
 	<style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}</style></head>
 
 	<body>
 		<header class="header">
-			<a class="back" href="javascript:history.back()"></a>
+			<a class="back" href="#" onclick="closeme()"></a>
 			<h5 class="tit">追星星的人</h5>
 			<div class="right">资料</div>
 		</header>
@@ -39,6 +40,15 @@
 			<p id="send">发送</p>
 		</div>
 	<script src="js/chat.js" type="text/javascript" charset="utf-8"></script>
+	 <script type="text/javascript" src="../js/doT.min.js"></script>	
+ <script type="text/javascript" src="../js/common.js"></script>
+ <script>
+ 	function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+ 	
+ </script>
 	<!--<script src="js/socket.js" type="text/javascript" charset="utf-8"></script>-->
 	
 

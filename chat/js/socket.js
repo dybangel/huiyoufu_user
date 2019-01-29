@@ -16,7 +16,8 @@ $(function(){
                     //关闭用户信息输入框
                     //$('#login_block').attr('style','');
 
-                    socket = new WebSocket(ip);
+                    //socket = new WebSocket(ip);
+                    socket= new ReconnectingWebSocket(ip);
                     //连接建立
                     socket.onopen = function(){
                         send('login',nickname);
@@ -70,6 +71,7 @@ $(function(){
                             content: content
                         };
                         try{
+                        	//socket.refresh();
                             socket.send(JSON.stringify(msg));
                         } catch(ex) {
                             console.log(ex);

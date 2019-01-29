@@ -1,5 +1,5 @@
-<html><head _wxhkphogpkobbkjccgfifhfjlahnoocnan_="shake_1.0">
-<title>怀玉乡旅游订单填写</title>
+<html><head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -10,55 +10,76 @@
 <link rel="stylesheet" type="text/css" href="css/lxs_index.css">
 <link rel="stylesheet" type="text/css" href="css/lxsHeadFoot.css">
 <link rel="stylesheet" type="text/css" href="css/order_new.css">
-<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/lxs_index00.js"></script>
+    <script src="../datetime/js/jquery.1.7.2.min.js"></script>
+    <script src="../datetime/js/mobiscroll_002.js" type="text/javascript"></script>
+	<script src="../datetime/js/mobiscroll_004.js" type="text/javascript"></script>
+	<link href="../datetime/css/mobiscroll_002.css" rel="stylesheet" type="text/css">
+	<link href="../datetime/css/mobiscroll.css" rel="stylesheet" type="text/css">
+	<script src="../datetime/js/mobiscroll.js" type="text/javascript"></script>
+	<script src="../datetime/js/mobiscroll_003.js" type="text/javascript"></script>
+	<script src="../datetime/js/mobiscroll_005.js" type="text/javascript"></script>
+	<link href="../datetime/css/mobiscroll_003.css" rel="stylesheet" type="text/css">
+	
+<!--</script><script src="js/jquery-2.1.4.min.js"></script>-->
+<!--<script src="js/lxs_index00.js"></script>-->
 <script></script>
 <style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}</style></head>
 <body>
 
 <div class="content">
 	<div class="headTop">
-		<a href="javascript:history.go(-1)" class="back"><i class="iconBack"></i></a><span>订单填写</span><a class="more"><i class="iconDian"></i><i class="iconDian"></i><i class="iconDian"></i></a>
+		<a href="" onclick="closeme()" class="back"><i class="iconBack"></i></a><span>订单填写</span><a class="more"><i class="iconDian"></i><i class="iconDian"></i><i class="iconDian"></i></a>
 	</div>
 </div>
 
 
 <div class="j_main m-main">
 	<div class="o_logo">
-		<span>登录预订更便捷</span><a href="" rel="nofollow">马上登录</a>
+		<span>登陆订桌更便捷</span><a href="" rel="nofollow">马上登录</a>
 	</div>
 	<form action="" method="post" name="form_1">
 		
 		<div class="tit">
-			<i></i>填写出游信息
+			<i></i>填写订桌信息
 		</div>
 		<div class="txt">
 			<dl>
-				<dt>线路名称</dt>
-				<dd class="line30">怀玉乡红色旅游基地纯玩3晚4日游【景点门票全含】</dd>
+				<dt>店铺名称</dt>
+				<dd id="store_name"class="line30">怀玉乡红色旅游基地纯玩3晚4日游【景点门票全含】</dd>
 			</dl>
 			<dl>
+				<dt>店铺地址</dt>
+				<dd id="store_address" class="line30">怀玉乡红色旅游基地纯玩3晚4日游【景点门票全含】</dd>
+			</dl>
+			<!--<dl>
 				<dt>线路类型</dt>
 				<dd class="line30">跟团游</dd>
-			</dl>
+			</dl>-->
 			<dl>
-				<dt>游玩日期</dt>
-				<dd>2018-09-10</dd>
+				<dt>就餐时间</dt>
+				<!--<dd id="appDateTime">2019-02-01 17:00:00</dd>-->
+				<div class="demos">
+				<label for="appDateTime"></label>
+					<input value="2015-05-01 15:42" class="" readonly="" name="appDateTime" id="appDateTime" type="text">
+				</div>
 			</dl>
 			<dl class="J_price">
 				<dt>成人</dt>
-				<dd class="box-flex-1 price pd0" id="adult_price_span"><span>￥ <span id="price_d">620</span></span></dd><dd class="box-flex-2"><span class="subadd j_num"><span class="sub" data-type="adults"></span><input id="j_price_d_num" type="number" min="1" max="99" class="text_num" value="1" name="adult_num"><span class="add on" data-type="adults"></span></span></dd>
+				<!--<dd class="box-flex-1 price pd0" id="adult_price_span"><span>￥ <span id="price_d">620</span></span></dd>-->
+				<dd class="box-flex-2"><span class="subadd j_num"><span class="sub" data-type="adults"></span><input id="j_price_d_num" type="number" min="1" max="99" class="text_num" value="1" name="adult_num"><span class="add on" data-type="adults"></span></span></dd>
 			</dl>
 			<dl class="J_price">
 				<dt>儿童</dt>
-				<dd class="box-flex-1 price pd0" id="adult_price_span"><span>￥ <span id="price_child_d">0</span></span></dd><dd class="box-flex-2"><span class="subadd j_num"><span class="sub" data-type="adults"></span><input id="j_price_child_d_num" type="number" min="0" max="99" class="text_num" value="0" name="child_num"><span class="add on" data-type="adults"></span></span></dd>
+				<!--<dd class="box-flex-1 price pd0" id="adult_price_span"><span>￥ <span id="price_child_d">0</span></span></dd>-->
+				<dd class="box-flex-2"><span class="subadd j_num"><span class="sub" data-type="adults"></span><input id="j_price_child_d_num" type="number" min="0" max="99" class="text_num" value="0" name="child_num"><span class="add on" data-type="adults"></span></span></dd>
 			</dl>
 		</div>
-		<div class="tit">
+		<!--<div class="tit">
 			<i></i>保险信息<br>
 			<span>注：购买保险需如实填写被保险人姓名与身份证号</span>
-		</div>
-		<div class="txt txt2 J_baoxian"> <dl> <dt> <a href="javascript:;" class="j_baoxian_tit J_baoxian_info">选择保险</a>   </dt> <dd> <font><span class="j_baoxian_c"></span><i class="more"></i></font> </dd> </dl> </div>
+		</div>-->
+		<!--<div class="txt txt2 J_baoxian"> <dl> <dt> <a href="javascript:;" class="j_baoxian_tit J_baoxian_info">选择保险</a>   </dt> <dd>
+			<font><span class="j_baoxian_c"></span><i class="more"></i></font> </dd> </dl> </div>-->
 		<script type="text" id="j_baoxian_con"> <dl> <dt> <a href="javascript:;" class="j_baoxian_tit J_baoxian_info">*title*</a> <input type="hidden" name="*name1*" value="*id*" /> <input type="hidden" name="*name2*" value="*price*" /> </dt> <dd> <font><span class="j_baoxian_c">*price_c*</span><i class="more"></i></font> </dd> </dl> </script>
 		<script></script>
 		<div class="tit">
@@ -67,7 +88,7 @@
 		<div class="txt">
 			<dl>
 				<dt>联系人</dt>
-				<dd><input maxlength="20" type="text" name="truename" class="o_man" placeholder="真实姓名（必填）" value=""></dd>
+				<dd><input maxlength="20" type="text" name="truename" class="o_man" placeholder="先生/女士（必填）" value=""></dd>
 			</dl>
 			<dl>
 				<dt>手机号码</dt>
@@ -114,18 +135,18 @@
 		<div class="booking_notes">
 			<label><i class="on"></i>我已阅读并同意此产品的</label><a href="javascript:;" class="btn_notes">预订须知</a>
 			<p>
-				温馨提示：为了保障您的出游权益，请务必在线支付订单。
+				<!--温馨提示：为了保障您的用餐权益，请务必在线支付订单。-->
 			</p>
 		</div>
 	</form>
 	<div class="submintFix">
 		<dl>
 			<dt>
-			<div class="price">
+			<!--<div class="price">
 				订单总额 <span>￥<em class="j_all_money">620</em></span>
-			</div>
+			</div>-->
 			</dt>
-			<dd class="sbmFix"><button type="button" id="save">提交订单</button></dd>
+			<dd class="sbmFix"><button type="button" onclick="tijiao()" id="tijiao">提交</button></dd>
 		</dl>
 	</div>
 </div>
@@ -455,7 +476,7 @@
 </div>
 <div class="notes_con" id="contentWrapper">
 	<div class="text_con" id="contentScroller">
-		<strong>零售平台预订须知 （免责条款）</strong><b>第一条.特别须知</b>
+		<strong>会友福预订须知 （免责条款）</strong><b>第一条.特别须知</b>
 		<p>
 			怀玉乡旅游网代理预订平台展示的旅游产品由具备相关资质的合作商家直接提供，怀玉乡旅游网仅作为网络预订平台。合作商家充分借用怀玉乡旅游网预订平台，推出全方位的旅游产品，并负责产品销售、资源确认、合同签署、发票开具、行程安排等全部环节的旅游服务。怀玉乡旅游网作为旅游产品的展示平台，您对本协议的接受并不意味着怀玉乡旅游网成为旅游产品交易的参与者，对前述交易怀玉乡旅游网仅提供技术支持，不对合作商家行为的合法性、有效性及旅游产品的真实性、合法性及有效性作任何明示或暗示的担保。
 		</p>
@@ -514,17 +535,62 @@
 			</div>
 			<a href="javascript:;" class="close"></a>
 		</div>
-
+ <script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+ <script type="text/javascript" src="../js/doT.min.js"></script>	
+ <script type="text/javascript" src="../js/common.js"></script>
+ 
 <script src="js/min_com.js"></script>
-<script src="js/order_xianlu.js"></script>
+<!--<script src="js/order_xianlu.js"></script>-->
 <script>
+function plusReady(){
+store_code=plus.webview.currentWebview().store_code;
+member_id=plus.webview.currentWebview().member_id;
+store_name=plus.webview.currentWebview().store_name;
+store_address=plus.webview.currentWebview().store_address;
+$('#store_name')[0].innerHTML=store_name;
+$('#store_address')[0].innerHTML=store_address;
+
+var currYear = (new Date()).getFullYear();	
+			var opt={};
+			opt.date = {preset : 'date'};
+			opt.datetime = {preset : 'datetime'};
+			opt.time = {preset : 'time'};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+		        display: 'modal', //显示方式 
+		        mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+		        startYear: currYear - 10, //开始年份
+		        endYear: currYear + 10 //结束年份
+			};
+
+//		  	$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+		  	var optDateTime = $.extend(opt['datetime'], opt['default']);
+		  	var optTime = $.extend(opt['time'], opt['default']);
+		    $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+		    //alert('a');
+//		    $("#appTime").mobiscroll(optTime).time(optTime);
+
+};
+mui.ready(function () {			
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener('plusready', plusReady, false);
+			};
+})	
+	
+
 var is_dijie = '0'; /*预定须知弹窗*/
  var cart_type_num = 0;
  var myScroll;
  var mobiletel_regexp = /^1[3|4|5|7|8|9][0-9]\d{8}$/;
 
  function loaded() {
- 	myScroll = new iScroll('contentWrapper');
+ 	//myScroll = new iScroll('contentWrapper');
  }
  function bodyscroll(e) {
  	e.preventDefault();
@@ -709,6 +775,56 @@ var is_dijie = '0'; /*预定须知弹窗*/
  function guoqing_yh() {
 
  }
+// function plusReady(){
+// 	
+//      
+// }
+// mui.ready(function () {			
+//			if(window.plus){
+//				plusReady();
+//			}else{
+//				document.addEventListener('plusready', plusReady, false);
+//			};
+//})
+// 
+ function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+ function tijiao(){
+ 	
+ 	//mui.toast('store_code'+store_code+'+'+member_id+' store_name:'+store_name+'store_address:'+store_address);
+   var ycsj=$('#appDateTime')[0].value;
+   var reg1=new RegExp("-","g"); //创建正则RegExp对象   
+    var reg2=new RegExp(" ","g"); //创建正则RegExp对象   
+     var reg3=new RegExp(":","g"); //创建正则RegExp对象   
+    ycsj=ycsj.replace(reg1,"");
+    ycsj=ycsj.replace(reg2,"");
+    ycsj=ycsj.replace(reg3,"")+'00';
+    alert(ycsj);
+   var ycrs=$('#j_price_d_num')[0].value;
+   var etrs=$('#j_price_child_d_num')[0].value;
+   getjson('setorder','store_code='+store_code+'&member_id='+member_id+'&ycrs='+ycrs+'&etrs='+etrs+'&ycsj='+ycsj);
+   closeme();
+ }
+ function getjson(action,par){
+ 	Gserver='http://192.168.123.2';
+	 $.ajax({
+      		type:"get",
+      		url:Gserver+"/huiyoufu_api/api.php"+"?"+par,
+			async:true,
+      		data:{"action":action},
+      		dataType:"json", // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
+      		success:function(data){		
+      			if(data!="null"){					
+      				alert('ok');
+      							}
+								},
+								 error: function(xhr, type, errorThrown) {
+								 	console.log(errorThrown);			 	
+								 }
+							})
+}
 </script>
 		
 		<div class="menabanBai j_mengban_bai"></div><div class="menaban_o j_mengban_o"></div><div class="j_con_yh content"></div></body></html>

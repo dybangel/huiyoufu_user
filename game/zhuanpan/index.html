@@ -19,12 +19,17 @@
 <style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')}</style></head>
 
 <body>
+<audio id="music1" controls="controls" autoplay="autoplay" preload id="music1" hidden>
+<source src="music/zhuanpan.mp3" />
+</audio>
 <div id="wrap">
     <div class="header clearfix">
         
-        <a href="javascript:history.go(-1)" class="back"> <p class="rule fl">返回</p></a>
+    <!--    <a href="javascript:history.go(-1)" class="back">-->
+        	<p class="rule fl" onclick="closeme()">返回</p>
+      <!--  </a>-->
         
-        <p class="rule fl">活动规则</p>
+        <p class="rule fl" style="    margin-left: 18%;">活动规则</p>
         <a href="personal-center.html" id="myWin">
             <p class="my fr">我的奖品</p>
         </a>
@@ -172,12 +177,19 @@
     
     
 </div>
-
+ <script type="text/javascript" src="../../js/doT.min.js"></script>	
+ <script type="text/javascript" src="../../js/common.js"></script>
 <script src="js_game/jquery-1.11.3.min.js"></script>
 <script src="js_game/jquery.rotate.js"></script>
 <script src="js_game/h5_game_common.js"></script>
 <script src="js_game/index.js"></script>
 <script src="js_game/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+	function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+</script>
 <script type="text/javascript">jQuery("#txtMarqueeTop").slide({ mainCell:"ul",autoPlay:true,effect:"topMarquee",interTime:50,vis:6  });</script>
 
 </body></html>

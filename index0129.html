@@ -1,0 +1,827 @@
+<html style="background-color: #FBFBFB;">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta charset="UTF-8">
+	<title>会有福</title>
+	<link rel="stylesheet" type="text/css" href="themes/css/core.css">
+	<link rel="stylesheet" type="text/css" href="themes/css/icon.css">
+	<link rel="stylesheet" type="text/css" href="themes/css/home.css">
+	<link rel="stylesheet" type="text/css" href="themes/css/dh_style.css">
+	<link rel="stylesheet" type="text/css" href="themes/css/swiper.min.css">
+<!--	<link rel="stylesheet" href="themes/css/mui.min.css">-->
+</head>
+<body>
+<style type="text/css">
+.my_shadow{
+		    box-shadow: 0.5px 0.5px 0.5px 0.8px #888888;
+	}
+.mui-scroll {
+    position: absolute;
+   /* z-index: 1;*/
+    width: 100%;
+}
+.mui-scroll-wrapper {
+   /* position:absolute;*/
+    /*移动端需要屏蔽上面，pc端不需要屏蔽*/
+   /* z-index: 2;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+}
+div.aui-banner-wrapper-item{
+	margin-top: -5%;
+}
+</style>
+ 
+
+	<header class="aui-header-default aui-header-fixed aui-header-bg">
+		<a onclick="clicked('barcode_scan.html',true,true)" class="aui-header-item">
+			<i class="aui-icon aui-icon-code"></i>
+		</a>
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="aui-header-search-box">
+				<i class="aui-icon aui-icon-small-search"></i>
+				<input id="" type="text" placeholder="iphone8 手机钢化膜" class="aui-header-search">
+			</div>
+		</div>
+		<a href="my-membership.html" class="aui-header-item-icon">
+			<i class="aui-icon aui-icon-packet"></i>
+			<i class="aui-icon aui-icon-member"></i>
+		</a>
+		
+	</header>
+<div id="pullRefresh" class=" mui-scroll-wrapper">	
+	<div class="mui-scroll">
+	<div class="aui-content-box">
+
+<!--轮播图-->
+	<div id="banner_container"></div>
+
+<!--顶部导航按钮-->
+		<section class="aui-grid-content">
+			<div class="aui-grid-row">
+				<!--href="my-sign.html"--> 
+				<a  class="aui-grid-row-item event_jinrihaodian">
+					<i class="aui-icon-large aui-icon-sign"></i>
+					<p class="aui-grid-row-label">今日好店</p>
+				</a>
+			<!--href="my-time.html"-->
+			    <a  class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-time event_youhuiqianggou"></i>
+					<p class="aui-grid-row-label">优惠抢购</p>
+				</a>
+				<a href="my-membership.html" class="aui-grid-row-item event_wodekabao">
+					<i class="aui-icon-large aui-icon-vip"></i>
+					<p class="aui-grid-row-label">我的卡包</p>
+				</a>
+				<!-- <a href="my-purchase.html" class="aui-grid-row-item"> -->
+					<a href="state/index.html" class="aui-grid-row-item event_wodeyuding">
+					<i class="aui-icon-large aui-icon-group"></i>
+					<p class="aui-grid-row-label">我的预定</p>
+				</a>
+				<a href="my-invitation.html" class="aui-grid-row-item event_wodexinxi">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">我的信息</p>
+				</a>
+				<a href="share.html"  class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">拍照</p>
+					
+				</a>
+				<a href="javascript:openwin('dingzhuo/index.html','3702','1234')"  class="aui-grid-row-item myopen">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">打开</p>	
+				</a>
+				<a class="aui-grid-row-item myupload">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">上传</p>	
+				</a>
+				<a onclick=openwin("datetime/index.html") class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-share"></i>
+					<p class="aui-grid-row-label">时间</p>	
+				</a>
+			</div>
+		</section>
+<!--双按钮-->
+<div class="aui-avd-content clearfix">
+
+			<a href="#">
+				<img class="my_shadow" src="themes/img/pd/cf-1.jpg" alt="">
+			</a>
+			<a href="#">
+				<img src="themes/img/pd/cf-3.jpg" alt="">
+			</a>
+		</div>
+<!--轮播按钮-->		
+<div class="aui-slide-box aui-slide-box-clear">
+			<div class="aui-slide-list">
+				<ul class="aui-slide-item-list">
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-1.jpg">
+						</a>
+					</li>
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-2.jpg">
+						</a>
+					</li>
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-3.jpg">
+						</a>
+					</li>
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-4.jpg">
+						</a>
+					</li>
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-5.jpg">
+						</a>
+					</li>
+					<li class="aui-slide-item-item">
+						<a href="#" class="v-link">
+							<img class="v-img" src="themes/img/ad/tou-6.jpg">
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+<!--分割区-->
+<div class="aui-dri"></div>
+
+<section id="headlist" class="aui-list-product">
+<!-- 横向 -->
+		<div class="aui-list-product-box">		
+			<!-- 上 -->
+			<div class="aui-card-box">
+				<div class="aui-card-box-user">
+					<img src="themes/img/user/user1.png" alt="">
+				</div>
+				<div class="aui-card-box-name">
+					<h2 class="aui-card-box-name">轻量科技</h2>
+					<a href="dingzhuo/index.html"><span class="aui-card-box-btn">+订桌</span></a>
+				</div>
+				<div class="aui-card-box-time">11月10日前</div>
+			</div>
+			<!-- 中 -->
+			<div class="aui-card-media">
+				<div class="aui-card-media-item">
+					<img src="themes/img/pd/sf-3.jpg">
+				</div>
+				<a href="pengyouquan/index.html">
+				<div class="aui-card-media-inner">
+					<div class="aui-card-media-text">
+						<p>时尚女神节 抢5折优惠券转身变女神 你想要的这里都有</p>
+					</div>
+					<div class="aui-card-media-describe">
+						<span>1.1万人浏览 2390个动态</span>
+					</div>
+			
+					<div class="aui-settle-choice">
+			        	<span>限时抢购</span>
+			         </div>
+
+				</div>
+			</a>
+			</div>
+			<!-- 下 -->
+			<div class="aui-list-title-btn">
+								<a href="game/zhuanpan/index.html">抽奖</a>
+								<a href="tel:18688888888">电话</a>
+								<a href="chat/index.html" class="red-color">留言</a>
+			</div>
+			<!-- 分割线 -->
+			<div class="aui-dri"></div>
+		</div>
+
+<!-- 横向 -->
+		<div class="aui-list-product-box">
+					<!-- 横向 -->
+			<div class="aui-card-box">
+				<div class="aui-card-box-user">
+					<img src="themes/img/user/user1.png" alt="">
+				</div>
+				<div class="aui-card-box-name">
+					<h2 class="aui-card-box-name">轻量科技</h2>
+					<a href="dingzhuo/index.html"><span class="aui-card-box-btn">+订桌</span></a>
+				</div>
+				<div class="aui-card-box-time">11月10日前</div>
+			</div>
+			<div class="aui-card-media">
+				<div class="aui-card-media-item">
+					<img src="themes/img/pd/sf-3.jpg">
+				</div>
+
+				<a href="pengyouquan/index.html">
+				<div class="aui-card-media-inner">
+					<div class="aui-card-media-text">
+						<p>时尚女神节 抢5折优惠券转身变女神 你想要的这里都有</p>
+					</div>
+					<div class="aui-card-media-describe">
+						<span>1.1万人浏览 2390个动态</span>
+					</div>
+			
+					<div class="aui-settle-choice">
+			        	<span>限时抢购</span>
+			         </div>
+
+				</div>
+			</a>
+
+			</div>
+
+
+			<div class="aui-list-title-btn">
+								<a href="game/zhuanpan/index.html">抽奖</a>
+								<a href="tel:18688888888">电话</a>
+								<a href="chat/index.html" class="red-color">留言</a>
+			</div>
+
+
+			<div class="aui-dri"></div>
+		</div>
+
+
+<!-- testcode -->
+
+
+  <!--<div id="headlist"></div>-->
+  <!--<div id="rongqi"></div>
+  <div id="evaluation"></div>
+  <div id="arrays"></div>
+  <div id="condition"></div>-->
+</section>
+
+</div>		
+<!--<div class="aui-content-box"> end-->
+</div>
+</div><!--id="pullRefresh"  end-->
+
+	<!--弹出式导航菜单-->
+<div class="dh_wrap">
+	<div class="menu"><img class="dh_icon_menu" src="themes/img/dh/menu.png"><span class="dh_close"></span></div>
+	<div class="dh_btn dh_btn1 dh_close" data-num="1"><span>照相</span></div>
+	<div class="dh_btn dh_btn2 dh_close" data-num="2"><span>位置</span></div>
+	<div class="dh_btn dh_btn3 dh_close" data-num="3"><span>音乐</span></div>
+	<div class="dh_btn dh_btn4 dh_close" data-num="4"><span>聊天</span></div>
+</div>
+
+
+<!-- 	<footer class="aui-footer-default aui-footer-fixed">
+		<a href="index.html" class="aui-footer-item aui-footer-active">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-home"></span>
+			<span class="aui-footer-item-text">首页</span>
+		</a>
+		<a href="class.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-class"></span>
+			<span class="aui-footer-item-text">分类</span>
+		</a>
+		<a href="find.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-find"></span>
+			<span class="aui-footer-item-text">发现</span>
+		</a>
+		<a href="car.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-car"></span>
+			<span class="aui-footer-item-text">购物车</span>
+		</a>
+		<a href="ui-me.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-me"></span>
+			<span class="aui-footer-item-text">我的</span>
+		</a>
+	</footer> -->
+
+	   <script type="text/javascript" src="themes/js/zepto.min.js"></script>
+	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
+	<script type="text/javascript" src="themes/js/aui.js"></script>
+	<!-- <script src="themes/js/idangerous.swiper.min.js"></script>-->
+	 
+ <script type="text/javascript">
+//$(function(){
+//	$(".menu").click(function(){
+//		var span = $(this).find("span");
+//		if(span.hasClass("dh_open")){
+//			span.removeClass("dh_open").addClass("dh_close");
+//			$(".dh_btn").removeClass("dh_open").addClass("dh_close");
+//		}else{
+//			span.removeClass("dh_close").addClass("dh_open");
+//			$(".dh_btn").removeClass("dh_close").addClass("dh_open");
+//		}
+//	});
+//});
+</script>	
+
+<!-- api test -->
+<!--<script type="text/javascript" src="../../script/api.js"></script>
+  <script type="text/javascript" src="../../script/SHA1.js"></script>
+
+  <script type="text/javascript" src="../../script/APICloud-rest.js"></script>-->
+
+
+<!-- <div>Hi {{=it[0].fname}}!</div>
+<div>{{=it[0].faddressr || ''}}</div>
+<div>Hi {{=it[0].fname}}!</div>
+<div>{{=it[0].faddress || ''}}</div> -->
+<!--模板我的店铺-->
+<script id="store_template" type="text/x-dot-template">
+{{ for (var i=0;i<it.length;i++) { }}
+<!-- 横向 -->
+		<div class="aui-list-product-box">		
+			<!-- 上 -->
+			<div class="aui-card-box ">
+				<div class="aui-card-box-user event_community">
+					<img src="http://192.168.123.2/huiyoufu_api{{=it[i].fstore_logo}}" alt="">
+				</div>
+				<div class="aui-card-box-name">
+					<h2 class="aui-card-box-name event_community">{{=it[i].fstore_name}}</h2>
+				{{if(it[i].fstore_access_order==1){ }} 	<a class="dingzhuo" target="{{=it[i].fstore_code}}" store_name="{{=it[i].fstore_name}}" store_address="{{=it[i].fstore_address}}"><span class="aui-card-box-btn" >+订桌  </span></a>{{}}}
+				</div>
+				<div class="aui-card-box-time">11月10日前</div>
+			</div>
+			<!-- 中 -->
+			<div class="aui-card-media event_community">
+				<div class="aui-card-media-item">
+					<img src="http://192.168.123.2/huiyoufu_api{{=it[i].fstore_logo}}">
+				</div>
+				<a href="pengyouquan/index.html">
+				<div class="aui-card-media-inner">
+					<div class="aui-card-media-text">
+						<p>时尚女神节 抢5折优惠券转身变女神 你想要的这里都有</p>
+					</div>
+					<div class="aui-card-media-describe">
+						<span>1.1万人浏览 2390个动态</span>
+					</div>
+			
+					<div class="aui-settle-choice">
+			        	<span>限时抢购</span>
+			         </div>
+
+				</div>
+			</a>
+			</div>
+			<!-- 下 -->
+			<div class="aui-list-title-btn">
+							{{if(it[i].nowact_state==1){ }} 	<a  class="event_choujiang" target="{{=it[i].fstore_code}}">抽奖</a>{{ } }}
+								<a href="tel:{{=it[i].fstore_tel}}">电话</a>
+								<a  class="red-color event_chat"  target="{{=it[i].fstore_code}}">留言</a>
+			</div>
+			<!-- 分割线 -->
+			<div class="aui-dri"></div>
+			{{ } }}
+		</div>
+</script>
+<!--banner模板-->
+<script  id="banner_template" type="text/x-dot-template">
+<div class="aui-banner-content aui-fixed-top" data-aui-slider="">
+	<div class="aui-banner-wrapper" >	
+	 <div class="swiper-wrapper">
+		{{if(it&&it.length>0){ }}
+		{{for(var i=0;i<it.length;i++){ }}
+		<div class="swiper-slide aui-banner-wrapper-item" >
+			<img src="{{=it[i].fvalue}}" />
+		</div> <!-- 添加图片 -->
+		{{ } }}
+		{{ } }}
+	 </div>
+    </div> 	
+</div>
+     
+</script>
+<script id="evaluationtmpl" type="text/x-dot-template">
+{{ for(var prop in it) { }}
+<div>KEY:{{= prop }}---VALUE:{{=it[prop] }}</div>
+{{ } }}
+</script>
+<script id="arraystmpl" type="text/x-dot-template">
+{{~it.array:value:index}}
+<div>{{= index+1 }}{{= value}}!</div>
+{{~}}
+</script>
+<script id="conditionstmpl" type="text/x-dot-template">
+{{? !it.name }}
+<div>Oh, I love your name,{{=it.name}}!</div>
+{{?? it.age === 31}}
+<div>Guess nobody named youyet!</div>
+{{??}}
+You are {{=it.age}} and still dont have aname?
+{{?}}
+</script>
+<script id="template" type="text/template">
+  <div class="content" tapmode onclick="fnOpenContent('{{= areadata.id }}')">
+    <div class="section1">
+      <div class="from">
+        <div class="text">{{=areadata.acount}}</div>
+        <div>
+          <div class="text2">
+            <em>{{=areadata.acount}}</em>
+            <em>{{=areadata.acount}}评论</em>
+            <em>5999分钟前</em>
+            <div class="arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="img"><img src="../image/default1.jpg" id="thumbnail0_{{=areadata.id}}"></div>
+      <div class="pic"></div>
+    </div>
+  </div>
+  </script> 
+  <script type="text/javascript" src="themes/js/swiper.min.js"></script>
+  <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+ <script type="text/javascript" src="js/doT.min.js"></script>	
+ <script type="text/javascript" src="js/common.js"></script>
+
+<script>
+//plus.webview.currentWebview(.setStyle({scrollIndicator:'none'}));
+//$('#pullRefresh').Scroll({indicators:false});
+ Gserver="http://192.168.123.2";
+ Gmember_id="201912111022010001";
+var count=0;
+var Gstartnum=0;
+var Glimitnum=1;
+var ispull=true;
+
+// H5 plus事件处理
+function plusReady(){
+//验证sessionid
+setsessionid();
+//alert('test1');
+getjson("getbanners");//plusReady();
+		//alert('test2');
+mui("body").on("tap",".event_jinrihaodian",function(){
+var store_code='0';
+openwin('jinrihaodian.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_youhuiqianggou",function(){
+var store_code=this.target;
+openwin('game/zhuanpan/index.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_wodekabao",function(){
+var store_code=this.target;
+openwin('my-coupon.html',store_code,Gmember_id);//my-membership.html
+});
+mui("body").on("tap",".event_wodeyuding",function(){
+var store_code=this.target;
+openwin('my-order.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".event_wodexinxi",function(){
+var store_code=this.target;
+openwin('my-membership.html',store_code,Gmember_id);
+});
+
+mui("body").on("tap",".dingzhuo",function(){
+var store_code=this.target;
+var store_name=this.getAttribute('store_name');
+var store_address=this.getAttribute('store_address');
+openwin('dingzhuo/index.html',store_code,Gmember_id,store_name,store_address);
+});
+
+
+
+mui("body").on("tap",".event_choujiang",function(){
+var store_code=this.target;
+openwin('game/zhuanpan/index.html',store_code,Gmember_id);
+});
+
+mui("body").on("tap",".event_chat",function(){
+var store_code=this.target;
+openwin('chat/index.html',store_code,Gmember_id);
+});
+
+mui("body").on("tap",".event_community",function(){
+var store_code=this.target;
+openwin('pengyouquan/index.html',store_code,Gmember_id);
+});
+mui("body").on("tap",".myupload",function(){
+//var store_code=this.target;
+openwin('code_test2.html','3702',Gmember_id);
+});
+	
+};
+
+$(document).ready(function () {	
+		
+ })   
+ 
+mui.ready(function () {			
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener('plusready', plusReady, false);
+			};
+})
+
+//初始化上拉下拉事件
+mui.init({
+				pullRefresh: {
+					container: '#pullRefresh',
+					down: {
+						style:'circle',
+						callback: pulldownRefresh
+					},
+					up: {
+						// height:5,//可选.默认50.触发上拉加载拖动距离
+      					auto:false,//可选,默认false.自动上拉加载一次
+						//contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+     					//contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: pullupRefresh
+					}
+				}
+	});
+			
+		//var dot;
+		
+		function pullupRefresh() {
+			//	setTimeout(
+					getjson('getmystore');//,500);
+
+			}
+		/**
+			 * 下拉刷新具体业务实现
+			 */
+		function pulldownRefresh() {
+				setTimeout(function() {
+					//addData();
+					//alert('down');
+					 history.go(0);
+					//location.reload();
+					mui('#pullRefresh').pullRefresh().endPulldownToRefresh();
+				//	mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+					mui.toast("刷新完成");
+				}, 1500);
+			}
+	
+</script>
+
+
+
+<script type="text/javascript">
+	//二维码扫描
+var img = null;
+var blist = [];
+function scaned(t, r, f){
+	var d = new Date();
+	var h=d.getHours(),m=d.getMinutes(),s=d.getSeconds(),ms=d.getMilliseconds();
+	if(h < 10){ h='0'+h; }
+	if(m < 10){ m='0'+m; }
+	if(s < 10){ s='0'+s; }
+	if(ms < 10){ ms='00'+ms; }
+	else if(ms < 100){ ms='0'+ms; }
+	var ts = '['+h+':'+m+':'+s+'.'+ms+']';
+//alert(r);
+var arr=r.split("=");
+alert('门店编号：'+arr[1]+"绑定");
+//mui.toast("t="+t+" and r="+r+" and f="+f);
+}
+
+
+//检测设置wxid
+function setsessionid(){
+	var wxsessionid = plus.storage.getItem("wxsessionid");
+	if(wxsessionid==null){
+		setItemFun("wxsessionid","duyuanboid");
+		mui.toast("setid ok!");
+	}else{
+		mui.toast("Old wx id is:"+wxsessionid);
+	}
+}
+
+//本地数据存储
+function setItemFun(key,value) {
+		plus.storage.setItem( key, value );
+		//mui.toast( "数据存储成功，存储了"+key+" value为；"+value );
+}
+</script>
+	
+ <script>
+function selected(id){
+	var h = blist[id];
+	update( h.type, h.result, h.file );
+	if(h.result.indexOf('http://')==0  || h.result.indexOf('https://')==0){
+		plus.nativeUI.confirm(h.result, function(i){
+			if(i.index == 0){
+				plus.runtime.openURL(h.result);
+			}
+		}, '', ['打开', '取消']);
+	} else{
+		plus.nativeUI.alert(h.result);
+	}
+}
+function update(t, r, f){
+	outSet('扫描成功：');
+	outLine(t);
+	outLine(r);
+	outLine('\n图片地址：'+f);
+	if(!f || f=='null'){
+		img.src = '../img/barcode.png';	
+	} else{
+		plus.io.resolveLocalFileSystemURL(f, function(entry){
+			img.src=entry.toLocalURL();
+		});
+		//img.src = 'http://localhost:13131/'+f;
+	}
+}
+function onempty(){
+	if(window.plus){
+		plus.nativeUI.alert('无扫描记录');
+	} else {
+		alert('无扫描记录');
+	}
+}
+function cleanHistroy(){
+	if(blist.length > 0){
+		var hl = document.getElementById('history');
+		hl.innerHTML = '<li id="nohistory" class="ditem" onclick="onempty();">无历史记录	</li>';
+	}
+	plus.io.resolveLocalFileSystemURL('_doc/barcode/', function(entry){
+		entry.removeRecursively(function(){
+			// Success
+		}, function(e){
+			//alert( "failed"+e.message );
+		});
+	});
+}
+        
+ 
+ // 拍照
+function captureImage(){
+	var cmr = plus.camera.getCamera();
+	var res = cmr.supportedImageResolutions[0];
+	var fmt = cmr.supportedImageFormats[0];
+	console.log("Resolution: "+res+", Format: "+fmt);
+	cmr.captureImage( function( path ){
+			alert( "Capture image success: " + path );  
+		},
+		function( error ) {
+			alert( "Capture image failed: " + error.message );
+		},
+		{resolution:res,format:fmt}
+	);
+}
+function getjson(action){
+	
+	var par="";
+	if(action=="getmystore"){
+	}
+	//var count=0;
+	 $.ajax({
+      		type:"get",
+      		url:Gserver+"/huiyoufu_api/api.php",//?do=getdata&start="+count,
+			async:true,
+      		data:{"action":action,"member_id":Gmember_id,"start":Gstartnum,"limit":Glimitnum},
+      		dataType:"json", // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
+      		success:function(data){		
+      			if(data!="null"){
+      				if(action=="getmystore"){
+      					//limit偏移
+				      	Gstartnum=Gstartnum+Glimitnum;
+					mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
+					var template = $('#store_template')[0];
+						//绑定模板
+					var  dot = doT.template(template.innerHTML);
+					if(ispull){
+						//将模板和数据加载到容器
+						$('#headlist')[0].innerHTML= dot(data);
+						ispull=false;
+					}else{
+						$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
+						}
+					//mui.toast("更新到"+Gstartnum+"条");
+      				}else if(action=="getbanners"){
+      				//alert('test3');
+      				//alert(data);//mui.toast('setbanners');
+      					var template = $('#banner_template')[0];
+      					var  dot = doT.template(template.innerHTML);
+      				//	alert(data);
+      					$('#banner_container')[0].innerHTML=dot(data);
+      					setbanner();
+      				//	alert('a');
+      				}
+													
+      							}
+								},
+								 error: function(xhr, type, errorThrown) {
+								 	console.log(xhr);
+							 	
+								 }
+							})
+}
+
+
+
+
+//设置轮播图函数
+ function setbanner(){
+			var mySwiper = new Swiper(".swiper-container",{
+		       		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    				observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                    autoplay:1000,//--每秒中轮播一次
+                    loop:false,//--可以让图片循环轮播
+                    autoplayDisableOnInteraction:false,//--在点击之后可以继续实现轮播
+                    pagination:".swiper-pagination",//--让小圆点显示
+                    paginationClickable:true,//--实现小圆点点击
+                    prevButton:".swiper-button-prev",//--实现上一页的点击
+                    nextButton:".swiper-button-next",//--实现下一页的点击
+　　　　　　　　　　　　effect:"flip",//--可以实现3D效果的轮播
+					onSlideChangeStart:function(sw){
+						var num =parseInt(sw.activeIndex);
+						console.log('---'+num);
+					},
+					onSlideChangeEnd:function(swiper){
+						alert('end');
+						swiper:update();
+						mySwiper:startAutoplay();
+						mySwiper:reLoop();
+						
+					}
+                })  
+  }
+
+//打开新窗体
+function openwin(){
+	 var winpath = arguments[0]?arguments[0]:""; 
+	 var store_code = arguments[1]?arguments[1]:""; 
+	 var member_id = arguments[2]?arguments[2]:""; 
+	 var store_name=arguments[3]?arguments[3]:""; 
+	 var store_address=arguments[4]?arguments[4]:""; 
+	mui.openWindow({
+    url:winpath,
+    id:winpath,
+    styles:{
+      top:'0px',//新页面顶部位置
+      bottom:'0px',//新页面底部位置
+      //width:newpage-width,//新页面宽度，默认为100%
+      //height:newpage-height,//新页面高度，默认为100%
+     // ......
+    },
+    extras:{
+    	store_code:store_code,
+    	member_id:member_id,
+    	store_name:store_name,
+    	store_address:store_address
+     // .....//自定义扩展参数，可以用来处理页面间传值
+    },
+    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+    show:{
+      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+      aniShow:"slide-in-right",//页面显示动画，默认为”slide-in-right“；
+      duration:50 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+    },
+    waiting:{
+      autoShow:true,//自动显示等待框，默认为true
+      title:'正在加载...',//等待对话框上显示的提示内容
+      options:{
+        width:'10px',//等待框背景区域宽度，默认根据内容自动计算合适宽度
+        height:'10px',//等待框背景区域高度，默认根据内容自动计算合适高度
+      //  ......
+      }
+    }
+})
+	
+	
+}
+//异步获取数据
+//function load_val(callback){//定义一个回调函数
+//  $.getJSON("http://192.168.123.2/huiyoufu_api/api.php?do=getdate&start=1" , function(data){
+//      callback(data);//将返回结果当作参数返回
+//  });
+//}
+//先调用上面的函数，在调用下面的同名函数
+//load_val();
+
+//load_val(function(data){
+////  alert(data);//这里可以得到值
+//});
+
+      </script>
+         <!--<script type="text/javascript" src="themes/js/zepto.min.js"></script>
+	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
+	<script type="text/javascript" src="themes/js/aui.js"></script>-->
+	<!--<script>
+    //REM 响应式
+    ~function(){
+      var desN = 640,winW = document.documentElement.clientWidth,ratio = winW / desN;
+      document.documentElement.style.fontSize = ratio*100 + "px";
+    }();
+    //初始化swiper实现区域的滑动
+    //new Swiper([container selector],[settings])
+    var swiper1 = new Swiper('.swiper-container',{
+      loop:true,//无缝衔接滚动
+      effect:'cube',//滑动效果
+      autoplay:3000,
+      autoplayDisableOnInteraction:false,//用户操作swiper之后不禁止autoplay
+      pagination:'.swiper-pagination',
+      paginationType:'progress',//分页器样式
+      lazyLoading:true,//图片延迟加载
+      lazyLoadingInPrevNext:true//前一个和后一个延迟加载
+    })
+  </script>-->
+
+</body></html>

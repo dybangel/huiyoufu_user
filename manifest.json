@@ -146,7 +146,14 @@
 					"chat/index.html",
 					"barcode_scan.html",
 					"my-sign.html",
-					"pengyouquan/index.html"
+					"pengyouquan/index.html",
+					"my-addres.html",
+					"dingzhuo/index.html",
+					"code_test2.html",
+					"jinrihaodian.html",
+					"my-coupon.html",
+					"my-order.html",
+					"datetime/index.html"
 				],
 				"priority": 0
 			},
@@ -189,6 +196,20 @@
 				"resources": [],
 				"refer": [
 					"index.html"
+				],
+				"priority": 0
+			},
+			"my-edit-address.html": {
+				"resources": [],
+				"refer": [
+					"my-addres.html"
+				],
+				"priority": 0
+			},
+			"my-addres.html": {
+				"resources": [],
+				"refer": [
+					"my-edit-address.html"
 				],
 				"priority": 0
 			}
@@ -325,7 +346,6 @@
 				"game/zhuanpan/image/gift.png",
 				"themes/img/user/user10.png",
 				"game/zhuanpan/image/button.png",
-				"my-order.html",
 				"themes/img/pd/sf-27.jpg",
 				"webar/assets/images/btn-direct.png",
 				"webar/assets/js/xiaoxiongmao.fbm/xiongmao.png",
@@ -372,7 +392,6 @@
 				"Barcode/js/common.js",
 				"my-orders.html",
 				"webar/assets/images/turntable-arrow.png",
-				"my-addres.html",
 				"game/zhuanpan/image/circle.png",
 				"game/zhuanpan/image/light.png",
 				"themes/img/user/user0.png",
@@ -422,7 +441,6 @@
 				"themes/img/icon/icon-c2.jpg",
 				"倒计时2/judetail.js",
 				"pengyouquan/images/a1.jpg",
-				"my-coupon.html",
 				"Barcode/img/fdisk.png",
 				"themes/img/pd/sf-23.jpg",
 				"themes/js/jquery.min.js",
@@ -452,7 +470,6 @@
 				"game/zhuanpan/js_game/jquery.SuperSlide.2.1.1.js",
 				"themes/img/ad/x-sf-5.jpg",
 				"pengyouquan/images/link.png",
-				"my-edit-address.html",
 				"themes/img/icon/icon_radio4 (1).png",
 				"chat/images/msg-input.png",
 				"pengyouquan/images/guide2.png",

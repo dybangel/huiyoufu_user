@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	 <link rel="stylesheet" href="themes/css/swiper.min.css">
+	<title></title>
+</head>
+<body>
+
+<style type="text/css">
+.swiper-container {
+    width: 100%;
+    height: 300px;
+} 
+</style>
+
+<!-- 轮播图容器 -->
+<div id="banner_container" class="swiper-container"></div>
+<div style="background: red;width: 100%;height: 200px;">
+<a onclick="getImage()">capture</a><br><!--[if IE]>
+	
+<![endif]-->
+<br>
+<br>
+<br>
+<a onclick="upload()">upload</a>	
+  <div style="background: black; height: 150px;"><img id="x" src="" /></div>
+	
+</div>
+<!-- js引用 -->
+<script type="text/javascript" src="themes/js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/doT.min.js"></script>	
+ <script type="text/javascript" src="themes/js/swiper.min.js"></script>
+
+<!-- 轮播图模板 -->
+<script  id="banner_template" type="text/x-dot-template">
+	 <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="{{=it[0].fvalue}}" /></div> <!-- 添加图片 -->
+            <div class="swiper-slide"><img src="{{=it[1].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[2].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[3].fvalue}}" /></div>
+             <div class="swiper-slide"><img src="{{=it[4].fvalue}}" /></div> 
+      </div>
+         <div class="swiper-pagination"></div>
+         <!-- 小圆点分页器 -->
+         <!--    <div class="swiper-button-prev"></div>上一页 -->
+          <!--  <div class="swiper-button-next"></div>下一页 -->
+</script>
+
+ <script>    
+	var Gserver="http://192.168.123.2";
+	var Gapiname="/huiyoufu_api/api.php";
+	var Gget="get";
+	var Gdatatype="json";
+	
+// 拍照添加文件
+ function getImage() {
+//  var cmr = plus.camera.getCamera(); 
+//  cmr.captureImage( function ( p ) {        
+//      plus.io.resolveLocalFileSystemURL( p, function ( entry ) {    
+//          if(files.length<2){  
+//                var localurl = entry.toLocalURL();//把拍照的目录路径，变成本地url路径，例如file:///........之类的。
+//                appendFile(localurl);
+//                  } 
+//              });   
+//  },function( error ) {
+//          alert( "Capture image failed: " +error.message );
+//      }  
+//  );   
+var cmr = plus.camera.getCamera();
+    cmr.captureImage(function(p) {
+        plus.io.resolveLocalFileSystemURL(p, function(entry) {
+            appendFile(entry.fullPath); //处理图片的地方
+        }, function(e) {
+            plus.nativeUI.alert(e.message);
+        });
+    }, function(e) {}, {
+        filename: "_doc/camera/"
+    });
+} 
+
+// 从相册添加文件 
+function appendByGallery(){
+    plus.gallery.pick(function(path){
+
+         appendFile(path);//处理图片的地方
+    });
+}	
+
+
+
+// 添加文件
+var f1=null;
+function appendFile(path){
+
+  var img = new Image();
+        img.src = path;        // 传过来的图片路径在这里用。
+        img.onload = function () {
+            var that = this;
+            //生成比例 
+            var w = that.width,
+                h = that.height,
+                scale = w / h; 
+                w = 480 || w;              //480  你想压缩到多大，改这里
+                h = w / scale;
+
+            //生成canvas
+            var canvas = document.createElement('canvas');
+
+            var ctx = canvas.getContext('2d');
+
+            $(canvas).attr({width : w, height : h});
+
+            ctx.drawImage(that, 0, 0, w, h);
+
+            var base64 = canvas.toDataURL('image/jpeg', 1 || 0.8 );   //1最清晰，越低越模糊。有一点不清楚这里明明设置的是jpeg。弹出 base64 开头的一段 data：image/png;却是png。哎开心就好，开心就好
+//              alert(base64);      
+
+           f1 =base64;   // 把base64数据丢过去，上传要用。
+
+            var pic = document.getElementById("x");    
+            pic.src = base64;                    //这里丢到img 的 src 里面就能看到效果了
+    }
+
+}
+
+
+
+// 上传文件
+function upload(){ 
+
+     var wt=plus.nativeUI.showWaiting();
+     var url = 'http://192.168.123.2/huiyoufu_api/upload.php';
+            var dataType ='json';
+            //发送数据  
+            var data = { 
+                files1:f1       //base64数据        
+            };    
+            $.post(url, data, success, dataType);                          
+}
+        //成功响应的回调函数
+        var success = function(response) {   
+            plus.nativeUI.closeWaiting();
+            if(response != null){
+                alert("上传成功"); 
+            }
+
+     }  
+
+
+
+
+
+ //异步获取数据函数 
+ function getjson(action,templateid,containerid,func){
+	var count=0;
+	 $.ajax({
+      		type:Gget,
+      		url:Gserver+Gapiname,//?do=getdata&start="+count,
+			async:true,
+      		data:{"action":action,"start":count},
+      		dataType:Gdatatype, // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
+      		success:function(data){		
+      			if(data!="null"){	
+      				var template = $('#'+templateid)[0];	
+      				var  dot = doT.template(template.innerHTML);//绑定模板
+      				$('#'+containerid)[0].innerHTML=dot(data);//用模板和数据填充容器
+      				eval(func);
+      				if(action=="getmystore"){
+				      							// 		           count=count+1;
+																	// mui('#pullRefresh').pullRefresh().endPullupToRefresh(false);
+																	// var template = $('#interpolationtmpl')[0];
+																	// //绑定模板
+																	// var  dot = doT.template(template.innerHTML);
+																	// if(ispull){
+																	// 	//将模板和数据加载到容器
+																	// 	$('#headlist')[0].innerHTML= dot(data);
+																	// ispull=false;
+																	// }else{
+																	// 	$('#headlist')[0].innerHTML=$('#headlist')[0].innerHTML+dot(data);
+																	// }
+      				}else if(action=="getbanners"){
+					//	setbanner();
+      				 }// else if over				
+      			}//if(data!='null')over
+			},//success over
+			error: function(xhr, type, errorThrown) {
+				       console.log(xhr);				 	
+					}
+	   })//ajax over
+}//function over
+
+
+
+ $(document).ready(function () {
+ 	//alert('code_test2');
+  //getjson('getbanners','banner_template','banner_container','setbanner();'); 
+ })   
+ 
+
+  </script>
+</body>
+</html>

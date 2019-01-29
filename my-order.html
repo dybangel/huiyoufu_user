@@ -15,12 +15,12 @@
 <body>
 
 	<header class="aui-header-default aui-header-fixed aui-header-bg">
-		<a href="javascript:history.back(-1)" class="aui-header-item">
+		<a href="#" class="aui-header-item" onclick="closeme()">
 			<i class="aui-icon aui-icon-back-white"></i>
 		</a>
 		<div class="aui-header-center aui-header-center-clear">
 			<div class="aui-header-center-logo">
-				<div class="aui-car-white-Typeface">我的订单</div>
+				<div class="aui-car-white-Typeface">我的预定</div>
 			</div>
 		</div>
 		<a href="#" class="aui-header-item-icon" style="min-width:0">
@@ -32,379 +32,107 @@
 		<div class="m-tab demo-small-pitch" data-ydui-tab="">
 			<div class="aui-myOrder-fix">
 				<ul class="tab-nav">
-					<li class="tab-nav-item tab-active"><a href="javascript:;">全部</a></li>
-					<li class="tab-nav-item"><a href="javascript:;">待付款</a></li>
-					<li class="tab-nav-item"><a href="javascript:;">待发货</a></li>
-					<li class="tab-nav-item"><a href="javascript:;">待收货</a></li>
-					<li class="tab-nav-item"><a href="javascript:;">评价</a></li>
+					
+					<li class="tab-nav-item event_wait tab-active"><a id="daiqueren">待确认</a></li>
+					<li class="tab-nav-item event_already"><a href="#">已确认</a></li>
+					<li class="tab-nav-item event_cancel"><a href="#">已取消</a></li>
+				
+					<li class="tab-nav-item event_all"><a href="#">全部的</a></li>
+					
 				</ul>
 			</div>
 			<div class="aui-prompt"><i class="aui-icon aui-prompt-sm"></i>双十一期间发货及物流时效公告</div>
 			<div class="tab-panel">
-				<div class="tab-panel-item tab-active">
-					<ul>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">待付款</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-1.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">取消订货</a>
-								<a href="#" class="red-color">立即付款</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">已发货</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-2.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">查看物流</a>
-								<a href="#" class="red-color">确认收货</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">已发货</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-4.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">催物流</a>
-								<a href="#">查看物流</a>
-								<a href="#" class="red-color">确认收货</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">交易成功</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-5.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">删除订单</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">交易成功</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-6.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">删除订单</a>
-								<a href="#">查看物流</a>
-								<a href="#">追加评价</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
+			
+				<div class="tab-panel-item panel_wait tab-active">
+					<ul id="container_wait">
 					</ul>
 				</div>
-				<div class="tab-panel-item">
-					<ul>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">待付款</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-12.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">取消订货</a>
-								<a href="#" class="red-color">立即付款</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
+				<div class="tab-panel-item panel_already">
+					<ul id="container_already">
 					</ul>
 				</div>
-				<div class="tab-panel-item">
-					<ul>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">待付款</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-11.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">取消订货</a>
-								<a href="#" class="red-color">立即付款</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
+				<div class="tab-panel-item panel_cancel">
+					<ul id="container_cancel">
+					</ul>
+				</div>				
+				<div class="tab-panel-item panel_all ">
+					<ul id="container_all">
 					</ul>
 				</div>
-				<div class="tab-panel-item">
-					<ul>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">待付款</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-10.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">查看物流</a>
-								<a href="#" class="red-color">确认收货</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-					</ul>
-				</div>
-				<div class="tab-panel-item">
-					<ul>
-						<li>
-							<div class="aui-list-title-info">
-								<a href="#" class="aui-well ">
-									<div class="aui-well-bd">2017-11-14</div>
-									<div class="aui-well-ft">待付款</div>
-								</a>
-								<a href="javascript:;" class="aui-list-product-fl-item">
-									<div class="aui-list-product-fl-img">
-										<img src="themes/img/pd/sf-9.jpg" alt="">
-									</div>
-									<div class="aui-list-product-fl-text">
-										<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
-										<div class="aui-list-product-fl-mes">
-											<div>
-									<span class="aui-list-product-item-price">
-										<em>¥</em>
-										399.99
-									</span>
-												<span class="aui-list-product-item-del-price">
-										¥495.65
-									</span>
-											</div>
-											<div class="aui-btn-purchase">
-												x1
-											</div>
-										</div>
-									</div>
-
-								</a>
-							</div>
-							<div class="aui-list-title-btn">
-								<a href="#">查看订单</a>
-								<a href="#" class="red-color">评价送币</a>
-							</div>
-							<div class="aui-dri"></div>
-						</li>
-					</ul>
-				</div>
+		
 			</div>
 		</div>
 	</section>
 
+<script id="template_all" type="text/x-dot-template">
+	{{ for (var i=0;i<it.length;i++) { }}
+					<li>
+							<div class="aui-list-title-info">
+								<a href="#" class="aui-well ">
+									<div class="aui-well-bd">订单时间 {{=it[i].forder_time}}</div>
+									<div class="aui-well-ft">{{if(it[i].fverify_state==0){ }}待确认{{}}} {{if(it[i].fverify_state==1){ }}已确认{{}}} {{if(it[i].fverify_state==2){ }}已取消{{}}}</div>
+								</a>
+								<a href="javascript:;" class="aui-list-product-fl-item">
+									<div class="aui-list-product-fl-img">
+										<img src="http://192.168.123.2/huiyoufu_api {{=it[i].fstore_logo}}" alt="">
+									</div>
+									<div class="aui-list-product-fl-text">
+										<h3 class="aui-list-product-fl-title">{{=it[i].fstore_name}}</h3>
+										<h3 class="aui-list-product-fl-title">用餐人数： 成人 x{{=it[i].ycrs}} 儿童 x{{=it[i].etrs}}</h3>
+										<div class="aui-list-product-fl-mes">
+											<div>
+									<span class="aui-list-product-item-price">
+										<!--<em>¥</em>-->
+										到店时间
+									</span>
+									<span class="aui-list-product-item-price">
+										<!--<em>¥</em>-->
+										{{=it[i].ddsj}}
+									</span>
+												<!--<span class="aui-list-product-item-del-price">
+										¥495.65
+									</span>-->
+											</div>
+											<!--<div class="aui-btn-purchase">
+												x1
+											</div>-->
+										</div>
+									</div>
 
-	<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script type="text/javascript" src="themes/js/jquery.min.js"></script>
+								</a>
+							</div>
+							<div class="aui-list-title-btn">
+								<a href="#">取消订单</a>
+								<a href="#" class="red-color">联系电话</a>
+							</div>
+							<div class="aui-dri"></div>
+						</li>
+		{{ } }}				
+</script>
+<script type="text/javascript" src="js/doT.min.js"></script>	
+ <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/mui.min.js"></script>
+ <script>
+function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+</script>
+	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
 	<script type="text/javascript" src="themes/js/aui.js"></script>
 	<script type="text/javascript">
         /**
          * Javascript API调用Tab
          */
-        !function ($) {
-            var $tab = $('#J_Tab');
-
-            $tab.tab({
-                nav: '.tab-nav-item',
-                panel: '.tab-panel-item',
-                activeClass: 'tab-active'
-            });
+//      !function ($) {
+//          var $tab = $('#J_Tab');
+//
+//          $tab.tab({
+//              nav: '.tab-nav-item',
+//              panel: '.tab-panel-item',
+//              activeClass: 'tab-active'
+//          });
 
 			/*
 			 $tab.find('.tab-nav-item').on('open.ydui.tab', function (e) {
@@ -412,11 +140,81 @@
 			 });
 			 */
 
-            $tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
-                console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
-            });
-        }(jQuery);
+            //$tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
+              //  console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
+            //});
+       // }(jQuery);
 	</script>
+<script>
+	 function getjson(action,state,par){
+ 	Gserver='http://192.168.123.2';
+	 $.ajax({
+      		type:"get",
+      		url:Gserver+"/huiyoufu_api/api.php"+"?"+par,
+			async:true,
+      		data:{"action":action},
+      		dataType:"json", // 因为PHP返回数据是JSON格式，所以这里类似要用JSON
+      		success:function(data){		
+      			if(data!="null"){					
+      				//alert('ok');
+      			var template = $('#template_all')[0];	
+      			//绑定模板
+				var  dot = doT.template(template.innerHTML);
+				//将模板和数据加载到容器
+				$('#container_'+state)[0].innerHTML= dot(data);
+      			}
+								},
+								 error: function(xhr, type, errorThrown) {
+								 	console.log(errorThrown);			 	
+								 }
+							})
+}
 
+function plusReady(){
+	Gmember_id=plus.webview.currentWebview().member_id;
+	//alert(Gmember_id);
+	
+mui("body").on("tap",".event_already",function(){
+$(".tab-nav").children("li").removeClass("tab-active");
+$(".event_already").addClass('tab-active');
+$('.tab-panel').children("div").removeClass("tab-active");
+$(".panel_already").addClass('tab-active');
+getjson('getorder','already','member_id='+Gmember_id+'&state=already');
+});
+
+mui("body").on("tap",".event_wait",function(){
+$(".tab-nav").children("li").removeClass("tab-active");
+$(".event_wait").addClass('tab-active');
+$('.tab-panel').children("div").removeClass("tab-active");
+$(".panel_wait").addClass('tab-active');
+getjson('getorder','wait','member_id='+Gmember_id+'&state=wait');
+});
+mui("body").on("tap",".event_cancel",function(){
+$(".tab-nav").children("li").removeClass("tab-active");
+$(".event_cancel").addClass('tab-active');
+$('.tab-panel').children("div").removeClass("tab-active");
+$(".panel_cancel").addClass('tab-active');
+getjson('getorder','cancel','member_id='+Gmember_id+'&state=cancel');
+});
+
+mui("body").on("tap",".event_all",function(){
+$(".tab-nav").children("li").removeClass("tab-active");
+$(".event_all").addClass('tab-active');
+$('.tab-panel').children("div").removeClass("tab-active");
+$(".panel_all").addClass('tab-active');
+getjson('getorder','all','member_id='+Gmember_id+'&state=all');
+});
+getjson('getorder','wait','member_id='+Gmember_id+'&state=wait');
+}
+
+mui.ready(function () {			
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener('plusready', plusReady, false);
+			};
+})
+	 
+</script>
 
 </body></html>

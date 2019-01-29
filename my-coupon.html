@@ -15,7 +15,7 @@
 <body>
 
 	<header class="aui-header-default aui-header-fixed aui-header-bg">
-		<a href="javascript:history.back(-1)" class="aui-header-item">
+		<a href="#" class="aui-header-item" onclick="closeme()">
 			<i class="aui-icon aui-icon-back-white"></i>
 		</a>
 		<div class="aui-header-center aui-header-center-clear">
@@ -64,7 +64,15 @@
 	</section>
 
 
-	<script type="text/javascript" defer="" async="" src="https://track.uc.cn/uaest.js"></script><script type="text/javascript" src="themes/js/jquery.min.js"></script>
+ <script type="text/javascript" src="../js/doT.min.js"></script>	
+ <script type="text/javascript" src="../js/common.js"></script>
+ <script>
+function closeme(){
+ 	var ws=plus.webview.currentWebview();
+ 	plus.webview.close(ws);
+ }
+</script>
+	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
 	<script type="text/javascript" src="themes/js/aui.js"></script>
 	<script type="text/javascript">
         /**
